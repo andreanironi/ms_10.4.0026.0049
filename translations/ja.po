@@ -1,0 +1,703 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  microstrategy.admin.inc: n/a
+#  microstrategy.module: n/a
+#  microstrategy.pages.inc: n/a
+#  includes/microstrategy.session.inc: n/a
+#  microstrategy.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2011-08-22 06:54+0000\n"
+"PO-Revision-Date: 2011-08-22 06:54+0000\n"
+"Last-Translator: MicroStrategy Translation Team\n"
+"Language-Team: MicroStrategy Translation Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: microstrategy.admin.inc:14 microstrategy.module:289
+msgid "Pages"
+msgstr "ページ"
+
+#: microstrategy.admin.inc:17
+msgid "List, edit, or add MicroStrategy pages. A MicroStrategy page is a Drupal page that displays MicroStrategy content (such as reports, documents, folders, and so on)."
+msgstr "MicroStrategy ページをリスト､編集､または追加します｡MicroStrategy ページは､(レポート､ドキュメント､フォルダー等の) MicroStrategy コンテンツを表示する Drupal ページです｡"
+
+#: microstrategy.admin.inc:20 microstrategy.module:309
+msgid "Blocks"
+msgstr "ブロック"
+
+#: microstrategy.admin.inc:23
+msgid "List, edit, or add MicroStrategy blocks. A MicroStrategy block is a Drupal block that displays MicroStrategy content (such as reports, documents, folders, and so on)."
+msgstr "MicroStrategy ブロックをリスト､編集､または追加します｡MicroStrategy ブロックは､(レポート､ドキュメント､フォルダー等の) MicroStrategy コンテンツを表示する Drupal ブロックです｡"
+
+#: microstrategy.admin.inc:26 microstrategy.module:318
+msgid "Default Settings"
+msgstr "デフォルト設定"
+
+#: microstrategy.admin.inc:29
+msgid "Set the default settings for MicroStrategy pages or blocks. The changes are applied to any newly added and non-customized existing pages or blocks."
+msgstr "MicroStrategy ページまたはブロックにデフォルト設定を設定してください｡すべての新規に追加したページまたはブロックおよび非カスタムの既存のページまたはブロックへ変更を適用します｡"
+
+#: microstrategy.admin.inc:41;217
+msgid "Page Default Settings"
+msgstr "ページ デフォルト設定"
+
+#: microstrategy.admin.inc:44 microstrategy.module:144
+msgid "Set the default settings for MicroStrategy pages. The changes are applied to any newly added pages, as well as non-customized existing pages."
+msgstr "MicroStrategy ページにデフォルト設定を設定してください｡すべての新規に追加したページおよび非カスタムの既存のページへ変更を適用します｡"
+
+#: microstrategy.admin.inc:47;420
+msgid "Basic block default settings"
+msgstr "基本ブロック デフォルト設定"
+
+#: microstrategy.admin.inc:50 microstrategy.module:152
+msgid "Set the default settings for MicroStrategy basic blocks. The changes are applied to any newly added basic blocks, as well as non-customized existing basic blocks."
+msgstr "MicroStrategy 基本ブロックにデフォルト設定を設定してください｡すべての新規に追加した基本ブロックおよび非カスタムの既存の基本ブロックへ変更を適用します｡"
+
+#: microstrategy.admin.inc:53;423
+msgid "Master block default settings"
+msgstr "マスター ブロック デフォルト設定"
+
+#: microstrategy.admin.inc:56 microstrategy.module:155
+msgid "Set the default settings for MicroStrategy master blocks. The changes are applied to any newly added master blocks, as well as non-customized existing master blocks."
+msgstr "MicroStrategy マスター ブロックにデフォルト設定を設定してください｡すべての新規に追加したマスター ブロックおよび非カスタムの既存のマスター ブロックへ変更を適用します｡"
+
+#: microstrategy.admin.inc:76;367 microstrategy.pages.inc:211;240;253;266;314;327;340;369
+msgid "Name"
+msgstr "名前"
+
+#: microstrategy.admin.inc:76;367
+msgid "Operations"
+msgstr "操作"
+
+#: microstrategy.admin.inc:81
+msgid "edit"
+msgstr "編集"
+
+#: microstrategy.admin.inc:82;377
+msgid "settings"
+msgstr "設定"
+
+#: microstrategy.admin.inc:83;378
+msgid "delete"
+msgstr "削除"
+
+#: microstrategy.admin.inc:102
+msgid "Page Title"
+msgstr "ページ タイトル"
+
+#: microstrategy.admin.inc:107
+msgid "The title for this page."
+msgstr "このページのタイトル"
+
+#: microstrategy.admin.inc:112
+msgid "Path"
+msgstr "パス"
+
+#: microstrategy.admin.inc:117
+msgid "Specify a URL by which this page can be accessed. Use a relative path and do not use trailing slashes."
+msgstr "このページにアクセスする URL を指定してください｡相対パスを使用して､未尾にスラッシュを使用しないでください｡"
+
+#: microstrategy.admin.inc:121
+msgid "Create a menu entry"
+msgstr "メニュー エントリを作成"
+
+#: microstrategy.admin.inc:122
+msgid "If selected, a menu entry will be created for this page."
+msgstr "選択する場合､メニュー エントリをこのページに作成します｡"
+
+#: microstrategy.admin.inc:139
+msgid "Show page for specific roles"
+msgstr "特定ロールにのみこのページを表示"
+
+#: microstrategy.admin.inc:142
+msgid "Show this page only for the selected role(s)."
+msgstr "選択したロールにのみこのページを表示"
+
+#: microstrategy.admin.inc:153;170;190
+msgid "Save page"
+msgstr "ページを保存"
+
+#: microstrategy.admin.inc:161;170;176 microstrategy.module:301
+msgid "Add page"
+msgstr "ページを追加"
+
+#: microstrategy.admin.inc:187;188
+msgid "Page %title has been added."
+msgstr "ページ %title を追加しました｡"
+
+#: microstrategy.admin.inc:201;202
+msgid "Changes have been saved for page %title."
+msgstr "ページ %title に変更を保存しました｡"
+
+#: microstrategy.admin.inc:220;426
+msgid "%title settings"
+msgstr "%title 設定"
+
+#: microstrategy.admin.inc:234;456 microstrategy.pages.inc:41;89;627
+msgid "Submit"
+msgstr "提出"
+
+#: microstrategy.admin.inc:276;277
+msgid "Page default settings have been saved."
+msgstr "ページ デフォルト設定を保存しました｡"
+
+#: microstrategy.admin.inc:281;505;282;506
+msgid "%title settings have been saved."
+msgstr "%title 設定を保存しました｡"
+
+#: microstrategy.admin.inc:313
+msgid "Are you sure you want to delete the page %title?"
+msgstr "ページ %title を削除してもよろしいですか?"
+
+#: microstrategy.admin.inc:329;330
+msgid "Page %title has been deleted."
+msgstr "ページ %title を削除しました｡"
+
+#: microstrategy.admin.inc:349;372
+msgid "Basic"
+msgstr "基本"
+
+#: microstrategy.admin.inc:349;374
+msgid "Master"
+msgstr "マスター"
+
+#: microstrategy.admin.inc:353
+msgid "Add block"
+msgstr "ブロックを追加"
+
+#: microstrategy.admin.inc:367
+msgid "Type"
+msgstr "タイプ"
+
+#: microstrategy.admin.inc:376
+msgid "configure"
+msgstr "構成"
+
+#: microstrategy.admin.inc:395
+msgid "You must specify a valid block name."
+msgstr "有効なブロック名を指定してください｡"
+
+#: microstrategy.admin.inc:409;410
+msgid "Block %title has been added."
+msgstr "ブロック %title を追加しました｡"
+
+#: microstrategy.admin.inc:496;497
+msgid "Basic block default settings have been saved."
+msgstr "基本ブロック デフォルト設定を保存しました｡"
+
+#: microstrategy.admin.inc:500;501
+msgid "Master block default settings have been saved."
+msgstr "マスター ブロック デフォルト設定を保存しました｡"
+
+#: microstrategy.admin.inc:518
+msgid "Are you sure you want to delete the block %title?"
+msgstr "ブロック %title を削除してもよろしいですか?"
+
+#: microstrategy.admin.inc:534;535
+msgid "Block %title has been deleted."
+msgstr "ブロック %title を削除しました｡"
+
+#: microstrategy.admin.inc:542;608
+msgid "MicroStrategy Content URL"
+msgstr "MicroStrategy コンテンツ URL"
+
+#: microstrategy.admin.inc:547;613
+msgid "MicroStrategy Web Base URL"
+msgstr "MicroStrategy Web ベース URL"
+
+#: microstrategy.admin.inc:554;620
+msgid "MicroStrategy Web Task URL"
+msgstr "MicroStrategy Web タスク URL"
+
+#: microstrategy.admin.inc:561;651
+msgid "MicroStrategy Report URL"
+msgstr "MicroStrategy レポート URL"
+
+#: microstrategy.admin.inc:567;633
+msgid "MicroStrategy Folder URL"
+msgstr "MicroStrategy フォルダー URL"
+
+#: microstrategy.admin.inc:573;639
+msgid "MicroStrategy History List URL"
+msgstr "MicroStrategy 履歴 URL"
+
+#: microstrategy.admin.inc:579;645
+msgid "MicroStrategy Search Page URL"
+msgstr "MicroStrategy 検索ページ URL"
+
+#: microstrategy.admin.inc:585
+msgid "MicroStrategy Project Page URL"
+msgstr "MicroStrategy プロジェクト ページ URL"
+
+#: microstrategy.admin.inc:591
+msgid "MicroStrategy HTML Document URL"
+msgstr "MicroStrategy HTML ドキュメント URL"
+
+#: microstrategy.admin.inc:597;657
+msgid "MicroStrategy Document URL"
+msgstr "MicroStrategy ドキュメント URL"
+
+#: microstrategy.admin.inc:627
+msgid "MicroStrategy Prompt URL"
+msgstr "MicroStrategy プロンプト URL"
+
+#: microstrategy.admin.inc:668
+msgid "MicroStrategy Server"
+msgstr "MicroStrategy サーバー"
+
+#: microstrategy.admin.inc:673
+msgid "MicroStrategy Intelligence Server"
+msgstr "MicroStrategy Intelligence Server"
+
+#: microstrategy.admin.inc:680
+msgid "MicroStrategy Intelligence Server Port"
+msgstr "MicroStrategy Intelligence Server ポート"
+
+#: microstrategy.admin.inc:687
+msgid "MicroStrategy Single Sign-on Namespace"
+msgstr "MicroStrategy シングル サインオン名前空間"
+
+#: microstrategy.admin.inc:690 microstrategy.pages.inc:116
+msgid "All MicroStrategy pages and blocks with the same Single Sign-on Namespace share the same MicroStrategy Credentials for this user."
+msgstr "すべて同一シングル サインオン名前空間のある MicroStrategy ページは､このユーザーの同一 MicroStrategy 信頼関係を共有します｡"
+
+#: microstrategy.admin.inc:694
+msgid "MicroStrategy Authentication Mode"
+msgstr "MicroStrategy 認証ﾓｰﾄﾞ"
+
+#: microstrategy.admin.inc:697
+msgid "Standard"
+msgstr "標準認証"
+
+#: microstrategy.admin.inc:698
+msgid "NT"
+msgstr "NT"
+
+#: microstrategy.admin.inc:699
+msgid "Guest"
+msgstr "ゲスト"
+
+#: microstrategy.admin.inc:700
+msgid "LDAP"
+msgstr "LDAP"
+
+#: microstrategy.admin.inc:701
+msgid "Database"
+msgstr "データベース認証"
+
+#: microstrategy.admin.inc:702
+msgid "Trusted"
+msgstr "信頼認証"
+
+#: microstrategy.admin.inc:703
+msgid "Integrated"
+msgstr "統合認証"
+
+#: microstrategy.admin.inc:708
+msgid "Let User Select Locales for MicroStrategy Web"
+msgstr "ユーザーに MicroStrategy Web の言語選択を許可"
+
+#: microstrategy.admin.inc:713
+msgid "MicroStrategy Project Name"
+msgstr "MicroStrategy プロジェクト名"
+
+#: microstrategy.admin.inc:720
+msgid "Regular Working Set Size"
+msgstr "標準レポート オブジェクト サイズ"
+
+#: microstrategy.admin.inc:726
+msgid "Cancel pending requests upon logout"
+msgstr "ログアウト時に､保留中要求をキャンセル"
+
+#: microstrategy.admin.inc:731
+msgid "Remove jobs in History List upon logout"
+msgstr "ログアウト時に､履歴ジョブを削除"
+
+#: microstrategy.admin.inc:733 microstrategy.pages.inc:569
+msgid "No"
+msgstr "いいえ"
+
+#: microstrategy.admin.inc:733 microstrategy.pages.inc:569
+msgid "Yes"
+msgstr "はい"
+
+#: microstrategy.admin.inc:733
+msgid "ReadOnly"
+msgstr "読み取り専用"
+
+#: microstrategy.admin.inc:742
+msgid "Plug-ins"
+msgstr "プラグイン"
+
+#: microstrategy.admin.inc:748
+msgid "Credential Mapper File Name"
+msgstr "信頼関係マッパー ファイル名"
+
+#: microstrategy.admin.inc:754
+msgid "Credential Mapper Function Name"
+msgstr "信頼関係マッパー関数名"
+
+#: microstrategy.admin.inc:760
+msgid "URL Parameter Mapper File Name"
+msgstr "URL パラメーター マッパー ファイル名"
+
+#: microstrategy.admin.inc:766
+msgid "URL Parameter Mapper Function Name"
+msgstr "URL パラメーター マッパー関数名"
+
+#: microstrategy.admin.inc:776 microstrategy.pages.inc:584
+msgid "User Parameters"
+msgstr "ユーザー パラメーター"
+
+#: microstrategy.admin.inc:782
+msgid "Shared User Parameter"
+msgstr "共有ユーザー パラメーター"
+
+#: microstrategy.admin.inc:785
+msgid "Format of \"name1:value1;name2:value2;\""
+msgstr "\"name1:value1;name2:value2;\" のフォーマット"
+
+#: microstrategy.admin.inc:789
+msgid "Personal User Parameter Template"
+msgstr "個人ユーザー パラメーター テンプレート"
+
+#: microstrategy.admin.inc:792
+msgid "Format of \"name1:display name1:default value;name2: display name2:default value2;\""
+msgstr "\"name1:display name1:default value;name2: display name2:default value2;\" のフォーマット"
+
+#: microstrategy.admin.inc:801;814
+msgid "Default Preferences"
+msgstr "デフォルト基本設定"
+
+#: microstrategy.admin.inc:915
+msgid "Path must be lowercase alphanumeric, underscores, dashes, or forward-slashes only."
+msgstr "パスには小文字の英数字､下線､ダッシュ､またはスラッシュ (/) を使用してください｡"
+
+#: microstrategy.admin.inc:922
+msgid "Path cannot begin or end with a slash."
+msgstr "パスの初めまたは終りにはスラッシュは使用できません｡"
+
+#: microstrategy.admin.inc:934
+msgid "The chosen path is already in use."
+msgstr "選択したパスはすでに使用されています｡"
+
+#: microstrategy.admin.inc:188;202;277;282;330;410;497;501;506;535 microstrategy.pages.inc:620;632 includes/microstrategy.session.inc:110;120;127;264;274;282
+msgid "microstrategy"
+msgstr "microstrategy"
+
+#: microstrategy.pages.inc:13;51
+msgid "%title preferences"
+msgstr "%title 基本設定"
+
+#: microstrategy.pages.inc:95;635
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: microstrategy.pages.inc:114
+msgid "Enter credential information to connect to MicroStrategy:"
+msgstr "MicroStrategy Intelligence Server へ接続するための信頼関係情報を入力"
+
+#: microstrategy.pages.inc:124
+msgid "Logon"
+msgstr "ログイン ID"
+
+#: microstrategy.pages.inc:131
+msgid "Password"
+msgstr "パスワード"
+
+#: microstrategy.pages.inc:139
+msgid "Default"
+msgstr "デフォルト"
+
+#: microstrategy.pages.inc:140
+msgid "German"
+msgstr "ドイツ語"
+
+#: microstrategy.pages.inc:141
+msgid "Spanish"
+msgstr "スペイン語 (スペイン)"
+
+#: microstrategy.pages.inc:142
+msgid "English"
+msgstr "英語 (US)"
+
+#: microstrategy.pages.inc:143
+msgid "English (UK)"
+msgstr "英語 (UK)"
+
+#: microstrategy.pages.inc:144
+msgid "French"
+msgstr "フランス語"
+
+#: microstrategy.pages.inc:145
+msgid "Italian"
+msgstr "イタリア語"
+
+#: microstrategy.pages.inc:146
+msgid "Japanese"
+msgstr "日本語"
+
+#: microstrategy.pages.inc:147
+msgid "Korean"
+msgstr "韓国語"
+
+#: microstrategy.pages.inc:148
+msgid "Portuguese (Brazil)"
+msgstr "ポルトガル語 (ブラジル)"
+
+#: microstrategy.pages.inc:149
+msgid "Swedish"
+msgstr "スウェーデン語"
+
+#: microstrategy.pages.inc:150
+msgid "Chinese (Simplified)"
+msgstr "中国語(簡体)"
+
+#: microstrategy.pages.inc:151
+msgid "Chinese (Traditional)"
+msgstr "中国語(繁体)"
+
+#: microstrategy.pages.inc:155
+msgid "Language"
+msgstr "言語"
+
+#: microstrategy.pages.inc:161
+msgid "Number and Date Format"
+msgstr "数値および日付の書式"
+
+#: microstrategy.pages.inc:167
+msgid "Metadata"
+msgstr "メタデータ"
+
+#: microstrategy.pages.inc:173
+msgid "Data"
+msgstr "データ"
+
+#: microstrategy.pages.inc:185;288
+msgid "Select MicroStrategy business intelligence content to display:"
+msgstr "表示する MicroStrategy ビジネス インテリジェンス コンテントを選択:"
+
+#: microstrategy.pages.inc:197;304
+msgid "Display MicroStrategy Report"
+msgstr "MicroStrategy レポートを表示"
+
+#: microstrategy.pages.inc:198;301
+msgid "Display MicroStrategy Folder"
+msgstr "MicroStrategy フォルダを表示"
+
+#: microstrategy.pages.inc:199;302
+msgid "Display MicroStrategy History List"
+msgstr "MicroStrategy 履歴を表示"
+
+#: microstrategy.pages.inc:200;303
+msgid "Display MicroStrategy Search Page"
+msgstr "MicroStrategy 検索ページを表示"
+
+#: microstrategy.pages.inc:201
+msgid "Display MicroStrategy Project Page"
+msgstr "MicroStrategy プロジェクト ページを表示"
+
+#: microstrategy.pages.inc:202
+msgid "Display MicroStrategy HTML Document"
+msgstr "MicroStrategy HTML ドキュメントを表示"
+
+#: microstrategy.pages.inc:203;305
+msgid "Display MicroStrategy Document"
+msgstr "MicroStrategy ドキュメントを表示"
+
+#: microstrategy.pages.inc:210;239;252;265;313;326;339;368
+msgid "ID"
+msgstr "ID"
+
+#: microstrategy.pages.inc:222;351
+msgid "Grid"
+msgstr "グリッド"
+
+#: microstrategy.pages.inc:223;352
+msgid "Graph"
+msgstr "グラフ"
+
+#: microstrategy.pages.inc:224;353
+msgid "Grid and Graph"
+msgstr "グリッド/グラフ"
+
+#: microstrategy.pages.inc:230;277;359;380
+msgid "None"
+msgstr "なし"
+
+#: microstrategy.pages.inc:231;278;360;381
+msgid "Flash Visualization"
+msgstr "Flash ビジュアリゼーション"
+
+#: microstrategy.pages.inc:232;279;361;382
+msgid "AJAX Visualization"
+msgstr "AJAX ビジュアリゼーション"
+
+#: microstrategy.pages.inc:300
+msgid "Display MicroStrategy Prompts (using a prompted report)"
+msgstr "(プロンプト レポートを使用して) MicroStrategy プロンプトを表示"
+
+#: microstrategy.pages.inc:438;498
+msgid "Load last session settings"
+msgstr "最終セッション設定をロード"
+
+#: microstrategy.pages.inc:513
+msgid "Set master block properties"
+msgstr "マスター ブロック プロパティを設定"
+
+#: microstrategy.pages.inc:518
+msgid "Display Send-to Menu"
+msgstr "[送信先] メニューを表示"
+
+#: microstrategy.pages.inc:528
+msgid "Default Target Block"
+msgstr "デフォルト ターゲット ブロック"
+
+#: microstrategy.pages.inc:540
+msgid "Enable All For Send as Filter"
+msgstr "Enable All For Send as Filter"
+
+#: microstrategy.pages.inc:550
+msgid "Choose display properties:"
+msgstr "表示プロパティを選択:"
+
+#: microstrategy.pages.inc:555
+msgid "Height"
+msgstr "高さ"
+
+#: microstrategy.pages.inc:561
+msgid "Width"
+msgstr "幅"
+
+#: microstrategy.pages.inc:567
+msgid "Scrolling"
+msgstr "スクロール バー"
+
+#: microstrategy.pages.inc:569
+msgid "Auto"
+msgstr "自動"
+
+#: microstrategy.pages.inc:762;768
+msgid "Report Name or ID cannot be empty!"
+msgstr "レポート名または ID は､空にはできません!"
+
+#: microstrategy.pages.inc:774
+msgid "Folder Name or ID cannot be empty!"
+msgstr "フォルダ名または ID は､空にはできません!"
+
+#: microstrategy.pages.inc:780
+msgid "HTML Document Name or ID cannot be empty!"
+msgstr "HTML ドキュメント名または ID は､空にはできません!"
+
+#: microstrategy.pages.inc:786
+msgid "Document Name or ID cannot be empty!"
+msgstr "ドキュメント名または ID は､空にはできません!"
+
+#: microstrategy.pages.inc:620;632
+msgid "%title preferences have been saved."
+msgstr "%title 基本設定を保存しました｡"
+
+#: microstrategy.module:131 microstrategy.info:0
+msgid "Integrate MicroStrategy into Drupal"
+msgstr "MicroStrategy を Drupal へ統合"
+
+#: microstrategy.module:134;283
+msgid "List, edit, or add MicroStrategy pages and blocks."
+msgstr "MicroStrategy ページおよびブロックをリスト､編集､または追加"
+
+#: microstrategy.module:137
+msgid "Microstrategy pages are listed below. Each page is accessible from one URL on your site. You can create as many pages as you need and determine the content to display (such as reports, documents, folders, and so on)."
+msgstr "Microstrategy ページを以下にリストします｡ご使用のサイトの単一 URL から各ページへアクセスできます｡必要ならば制限なしにページを作成､および表示する(レポート､ドキュメント､フォルダー等の) コンテンツを設定できます｡"
+
+#: microstrategy.module:140
+msgid "Microstrategy blocks are listed below. Each block is a Drupal block which displays some MicroStrategy content (for example, reports, documents, folders, and so on). You can create as many blocks as you need and determine what content to display. A good practice is to install the <a href='http://drupal.org/project/homebox'>HomeBox</a> module and then add blocks in a Homebox page, to display multiple MicroStrategy content in one page."
+msgstr "Microstrategy ブロックを以下にリストします｡各ブロックは､（例えば､レポート､ドキュメント､フォルダー等の） Microstrategy コンテンツの一部を表示する Drupal ブロックです｡"
+
+#: microstrategy.module:147
+msgid "Set the settings for the MicroStrategy page. The changes will overwrite default settings."
+msgstr "MicroStrategy ページに設定してください｡変更はデフォルト設定を上書きします｡"
+
+#: microstrategy.module:158
+msgid "Set the settings for the MicroStrategy block. The changes will overwrite default settings."
+msgstr "MicroStrategy ブロックに設定してください｡変更はデフォルト設定を上書きします｡"
+
+#: microstrategy.module:405
+msgid "Target Portlet {0} cannot be found!"
+msgstr "ターゲット ポートレット {0} が､見つかりません!"
+
+#: microstrategy.module:406
+msgid "Target Portlet {0}  points to different MicroStrategy Project"
+msgstr "ターゲット ポートレット {0} が､異なる MicroStrategy プロジェクトを指定しています｡"
+
+#: microstrategy.module:407
+msgid "Cannot display content because Portlet {0} is in edit mode."
+msgstr "ポートレット {0} が編集モードなので､コンテントを表示できません｡"
+
+#: microstrategy.module:441
+msgid "New Window"
+msgstr "新規ウィンドウ"
+
+#: microstrategy.module:463;267
+msgid "Preferences"
+msgstr "基本設定"
+
+#: microstrategy.module:171
+msgid "administer microstrategy"
+msgstr "MicroStrategy を管理"
+
+#: microstrategy.module:171
+msgid "access preferences"
+msgstr "アクセス基本設定"
+
+#: microstrategy.module:262
+msgid "View"
+msgstr "表示"
+
+#: microstrategy.module:282 microstrategy.info:0;0
+msgid "MicroStrategy"
+msgstr "MicroStrategy"
+
+#: microstrategy.module:296
+msgid "List"
+msgstr "リスト"
+
+#: microstrategy.module:327
+msgid "Edit page"
+msgstr "ページを編集"
+
+#: microstrategy.module:336
+msgid "Page Settings"
+msgstr "ページ設定"
+
+#: microstrategy.module:345
+msgid "Page"
+msgstr "ページ"
+
+#: microstrategy.module:355
+msgid "Block Settings"
+msgstr "ブロック設定"
+
+#: microstrategy.module:364
+msgid "Block"
+msgstr "ブロック"
+
+#: includes/microstrategy.session.inc:111;128;110;120;127;274
+msgid "Creating a session caused an error: %error"
+msgstr "セッション作成エラー: %error"
+
+#: includes/microstrategy.session.inc:118;272
+msgid "The response from %task task caused the following error: %error on line %line."
+msgstr "%task タスクからの応答で､エラー: 行 %line に %error"
+
+#: includes/microstrategy.session.inc:264;282
+msgid "Closing a session for %title caused an error: %error"
+msgstr "%title のセッションを閉じる際､エラーが発生しました｡: %error"
+

@@ -1,0 +1,703 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  microstrategy.admin.inc: n/a
+#  microstrategy.module: n/a
+#  microstrategy.pages.inc: n/a
+#  includes/microstrategy.session.inc: n/a
+#  microstrategy.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2011-08-22 06:54+0000\n"
+"PO-Revision-Date: 2011-08-22 06:54+0000\n"
+"Last-Translator: MicroStrategy Translation Team\n"
+"Language-Team: MicroStrategy Translation Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: microstrategy.admin.inc:14 microstrategy.module:289
+msgid "Pages"
+msgstr "페이지"
+
+#: microstrategy.admin.inc:17
+msgid "List, edit, or add MicroStrategy pages. A MicroStrategy page is a Drupal page that displays MicroStrategy content (such as reports, documents, folders, and so on)."
+msgstr "MicroStrategy 페이지를 나열, 편집 또는 추가합니다. MicroStrategy 페이지는 MicroStrategy 컨텐트(예: 리포트, 문서, 폴더 등)를 표시하는 Drupal 페이지입니다."
+
+#: microstrategy.admin.inc:20 microstrategy.module:309
+msgid "Blocks"
+msgstr "블록"
+
+#: microstrategy.admin.inc:23
+msgid "List, edit, or add MicroStrategy blocks. A MicroStrategy block is a Drupal block that displays MicroStrategy content (such as reports, documents, folders, and so on)."
+msgstr "MicroStrategy 블록을 나열, 편집 또는 추가합니다. MicroStrategy 블록은 MicroStrategy 컨텐트(예: 리포트, 문서, 폴더 등)를 표시하는 Drupal 블록입니다."
+
+#: microstrategy.admin.inc:26 microstrategy.module:318
+msgid "Default Settings"
+msgstr "기본 설정"
+
+#: microstrategy.admin.inc:29
+msgid "Set the default settings for MicroStrategy pages or blocks. The changes are applied to any newly added and non-customized existing pages or blocks."
+msgstr "MicroStrategy 페이지 또는 블록에 대한 기본 설정을 지정합니다. 변경 사항이 새로 추가했거나 사용자 정의되지 않은 기존의 페이지 또는 블록에 적용됩니다."
+
+#: microstrategy.admin.inc:41;217
+msgid "Page Default Settings"
+msgstr "페이지 기본 설정"
+
+#: microstrategy.admin.inc:44 microstrategy.module:144
+msgid "Set the default settings for MicroStrategy pages. The changes are applied to any newly added pages, as well as non-customized existing pages."
+msgstr "MicroStrategy 페이지에 대한 기본 설정을 지정합니다. 변경 사항이 새로 추가한 페이지뿐만 아니라 사용자 정의되지 않은 기존의 페이지에 적용됩니다."
+
+#: microstrategy.admin.inc:47;420
+msgid "Basic block default settings"
+msgstr "기본 블록 기본 설정"
+
+#: microstrategy.admin.inc:50 microstrategy.module:152
+msgid "Set the default settings for MicroStrategy basic blocks. The changes are applied to any newly added basic blocks, as well as non-customized existing basic blocks."
+msgstr "MicroStrategy 기본 블록에 대한 기본 설정을 지정합니다. 변경 사항이 새로 추가한 기본 블록뿐만 아니라 사용자 정의되지 않은 기존의 블록에 적용됩니다."
+
+#: microstrategy.admin.inc:53;423
+msgid "Master block default settings"
+msgstr "마스터 블록 기본 설정"
+
+#: microstrategy.admin.inc:56 microstrategy.module:155
+msgid "Set the default settings for MicroStrategy master blocks. The changes are applied to any newly added master blocks, as well as non-customized existing master blocks."
+msgstr "MicroStrategy 마스터 블록에 대한 기본 설정을 지정합니다. 변경 사항이 새로 추가한 마스터 블록뿐만 아니라 기존의 사용자 정의되지 않은 마스터 블록에 적용됩니다."
+
+#: microstrategy.admin.inc:76;367 microstrategy.pages.inc:211;240;253;266;314;327;340;369
+msgid "Name"
+msgstr "이름"
+
+#: microstrategy.admin.inc:76;367
+msgid "Operations"
+msgstr "작업"
+
+#: microstrategy.admin.inc:81
+msgid "edit"
+msgstr "편집"
+
+#: microstrategy.admin.inc:82;377
+msgid "settings"
+msgstr "설정"
+
+#: microstrategy.admin.inc:83;378
+msgid "delete"
+msgstr "삭제"
+
+#: microstrategy.admin.inc:102
+msgid "Page Title"
+msgstr "페이지 제목"
+
+#: microstrategy.admin.inc:107
+msgid "The title for this page."
+msgstr "이 페이지의 제목입니다."
+
+#: microstrategy.admin.inc:112
+msgid "Path"
+msgstr "경로"
+
+#: microstrategy.admin.inc:117
+msgid "Specify a URL by which this page can be accessed. Use a relative path and do not use trailing slashes."
+msgstr "이 페이지에 접근할 수 있는 URL을 지정합니다. 상대 경로를 사용하고 후행 슬래시를 사용하지 마십시오."
+
+#: microstrategy.admin.inc:121
+msgid "Create a menu entry"
+msgstr "메뉴 항목 만들기"
+
+#: microstrategy.admin.inc:122
+msgid "If selected, a menu entry will be created for this page."
+msgstr "선택한 경우 이 페이지에 대한 메뉴 항목이 생성됩니다."
+
+#: microstrategy.admin.inc:139
+msgid "Show page for specific roles"
+msgstr "특정 역할에 대한 페이지 표시"
+
+#: microstrategy.admin.inc:142
+msgid "Show this page only for the selected role(s)."
+msgstr "선택한 역할에 대해서만 이 페이지를 표시합니다."
+
+#: microstrategy.admin.inc:153;170;190
+msgid "Save page"
+msgstr "페이지 저장"
+
+#: microstrategy.admin.inc:161;170;176 microstrategy.module:301
+msgid "Add page"
+msgstr "페이지 추가"
+
+#: microstrategy.admin.inc:187;188
+msgid "Page %title has been added."
+msgstr "페이지 %title이(가) 추가되었습니다."
+
+#: microstrategy.admin.inc:201;202
+msgid "Changes have been saved for page %title."
+msgstr "%title 페이지에 대한 변경 사항이 저장되었습니다."
+
+#: microstrategy.admin.inc:220;426
+msgid "%title settings"
+msgstr "%title 설정"
+
+#: microstrategy.admin.inc:234;456 microstrategy.pages.inc:41;89;627
+msgid "Submit"
+msgstr "보내기"
+
+#: microstrategy.admin.inc:276;277
+msgid "Page default settings have been saved."
+msgstr "페이지 기본 설정이 저장되었습니다."
+
+#: microstrategy.admin.inc:281;505;282;506
+msgid "%title settings have been saved."
+msgstr "%title 설정이 저장되었습니다."
+
+#: microstrategy.admin.inc:313
+msgid "Are you sure you want to delete the page %title?"
+msgstr "페이지 %title을(를) 삭제하시겠습니까?"
+
+#: microstrategy.admin.inc:329;330
+msgid "Page %title has been deleted."
+msgstr "페이지 %title이(가) 삭제되었습니다."
+
+#: microstrategy.admin.inc:349;372
+msgid "Basic"
+msgstr "기본"
+
+#: microstrategy.admin.inc:349;374
+msgid "Master"
+msgstr "마스터"
+
+#: microstrategy.admin.inc:353
+msgid "Add block"
+msgstr "블록 추가"
+
+#: microstrategy.admin.inc:367
+msgid "Type"
+msgstr "유형"
+
+#: microstrategy.admin.inc:376
+msgid "configure"
+msgstr "구성"
+
+#: microstrategy.admin.inc:395
+msgid "You must specify a valid block name."
+msgstr "유효한 블록 이름을 지정해야 합니다."
+
+#: microstrategy.admin.inc:409;410
+msgid "Block %title has been added."
+msgstr "블록 %title이(가) 추가되었습니다."
+
+#: microstrategy.admin.inc:496;497
+msgid "Basic block default settings have been saved."
+msgstr "기본 블록 기본 설정이 저장되었습니다."
+
+#: microstrategy.admin.inc:500;501
+msgid "Master block default settings have been saved."
+msgstr "마스터 블록 기본 설정이 저장되었습니다."
+
+#: microstrategy.admin.inc:518
+msgid "Are you sure you want to delete the block %title?"
+msgstr "블록 %title을(를) 삭제하시겠습니까?"
+
+#: microstrategy.admin.inc:534;535
+msgid "Block %title has been deleted."
+msgstr "블록 %title이(가) 삭제되었습니다."
+
+#: microstrategy.admin.inc:542;608
+msgid "MicroStrategy Content URL"
+msgstr "MicroStrategy 컨텐트 URL"
+
+#: microstrategy.admin.inc:547;613
+msgid "MicroStrategy Web Base URL"
+msgstr "MicroStrategy Web 기본 URL"
+
+#: microstrategy.admin.inc:554;620
+msgid "MicroStrategy Web Task URL"
+msgstr "MicroStrategy Web 작업 URL"
+
+#: microstrategy.admin.inc:561;651
+msgid "MicroStrategy Report URL"
+msgstr "MicroStrategy 리포트 URL"
+
+#: microstrategy.admin.inc:567;633
+msgid "MicroStrategy Folder URL"
+msgstr "MicroStrategy 폴더 URL"
+
+#: microstrategy.admin.inc:573;639
+msgid "MicroStrategy History List URL"
+msgstr "MicroStrategy 사용내역 목록 URL"
+
+#: microstrategy.admin.inc:579;645
+msgid "MicroStrategy Search Page URL"
+msgstr "MicroStrategy 검색 페이지 URL"
+
+#: microstrategy.admin.inc:585
+msgid "MicroStrategy Project Page URL"
+msgstr "MicroStrategy 프로젝트 페이지 URL"
+
+#: microstrategy.admin.inc:591
+msgid "MicroStrategy HTML Document URL"
+msgstr "MicroStrategy HTML 문서 URL"
+
+#: microstrategy.admin.inc:597;657
+msgid "MicroStrategy Document URL"
+msgstr "MicroStrategy 문서 URL"
+
+#: microstrategy.admin.inc:627
+msgid "MicroStrategy Prompt URL"
+msgstr "MicroStrategy 프롬프트 URL"
+
+#: microstrategy.admin.inc:668
+msgid "MicroStrategy Server"
+msgstr "MicroStrategy Server"
+
+#: microstrategy.admin.inc:673
+msgid "MicroStrategy Intelligence Server"
+msgstr "MicroStrategy Intelligence Server"
+
+#: microstrategy.admin.inc:680
+msgid "MicroStrategy Intelligence Server Port"
+msgstr "MicroStrategy Intelligence Server 포트"
+
+#: microstrategy.admin.inc:687
+msgid "MicroStrategy Single Sign-on Namespace"
+msgstr "MicroStrategy 싱글 사인온 네임스페이스"
+
+#: microstrategy.admin.inc:690 microstrategy.pages.inc:116
+msgid "All MicroStrategy pages and blocks with the same Single Sign-on Namespace share the same MicroStrategy Credentials for this user."
+msgstr "동일한 싱글 사인온 네임스페이스를 가진 모든 MicroStrategy 페이지 및 블록은 이 사용자에 대한 동일한 MicroStrategy 자격 증명을 공유합니다."
+
+#: microstrategy.admin.inc:694
+msgid "MicroStrategy Authentication Mode"
+msgstr "MicroStrategy 인증 모드"
+
+#: microstrategy.admin.inc:697
+msgid "Standard"
+msgstr "표준"
+
+#: microstrategy.admin.inc:698
+msgid "NT"
+msgstr "NT"
+
+#: microstrategy.admin.inc:699
+msgid "Guest"
+msgstr "게스트"
+
+#: microstrategy.admin.inc:700
+msgid "LDAP"
+msgstr "LDAP"
+
+#: microstrategy.admin.inc:701
+msgid "Database"
+msgstr "데이터베이스"
+
+#: microstrategy.admin.inc:702
+msgid "Trusted"
+msgstr "신뢰됨"
+
+#: microstrategy.admin.inc:703
+msgid "Integrated"
+msgstr "통합됨"
+
+#: microstrategy.admin.inc:708
+msgid "Let User Select Locales for MicroStrategy Web"
+msgstr "사용자가 MicroStrategy Web의 로케일을 선택할 수 있음"
+
+#: microstrategy.admin.inc:713
+msgid "MicroStrategy Project Name"
+msgstr "MicroStrategy 프로젝트 이름"
+
+#: microstrategy.admin.inc:720
+msgid "Regular Working Set Size"
+msgstr "일반 작업 집합 크기"
+
+#: microstrategy.admin.inc:726
+msgid "Cancel pending requests upon logout"
+msgstr "로그아웃 시 보류 중인 요청 취소"
+
+#: microstrategy.admin.inc:731
+msgid "Remove jobs in History List upon logout"
+msgstr "로그아웃 시 사용내역 목록에서 작업 제거"
+
+#: microstrategy.admin.inc:733 microstrategy.pages.inc:569
+msgid "No"
+msgstr "아니오"
+
+#: microstrategy.admin.inc:733 microstrategy.pages.inc:569
+msgid "Yes"
+msgstr "예"
+
+#: microstrategy.admin.inc:733
+msgid "ReadOnly"
+msgstr "읽기 전용"
+
+#: microstrategy.admin.inc:742
+msgid "Plug-ins"
+msgstr "플러그인"
+
+#: microstrategy.admin.inc:748
+msgid "Credential Mapper File Name"
+msgstr "자격 증명 매퍼 파일 이름"
+
+#: microstrategy.admin.inc:754
+msgid "Credential Mapper Function Name"
+msgstr "자격 증명 매퍼 함수 이름"
+
+#: microstrategy.admin.inc:760
+msgid "URL Parameter Mapper File Name"
+msgstr "URL 매개 변수 매퍼 파일 이름"
+
+#: microstrategy.admin.inc:766
+msgid "URL Parameter Mapper Function Name"
+msgstr "URL 매개 변수 매퍼 함수 이름"
+
+#: microstrategy.admin.inc:776 microstrategy.pages.inc:584
+msgid "User Parameters"
+msgstr "사용자 매개 변수"
+
+#: microstrategy.admin.inc:782
+msgid "Shared User Parameter"
+msgstr "공유 사용자 매개 변수"
+
+#: microstrategy.admin.inc:785
+msgid "Format of \"name1:value1;name2:value2;\""
+msgstr "name1:value1;name2:value2;의 포맷"
+
+#: microstrategy.admin.inc:789
+msgid "Personal User Parameter Template"
+msgstr "개인 사용자 매개 변수 템플릿"
+
+#: microstrategy.admin.inc:792
+msgid "Format of \"name1:display name1:default value;name2: display name2:default value2;\""
+msgstr "name1:display name1:default value;name2: display name2:default value2;의 포맷"
+
+#: microstrategy.admin.inc:801;814
+msgid "Default Preferences"
+msgstr "기본 설정"
+
+#: microstrategy.admin.inc:915
+msgid "Path must be lowercase alphanumeric, underscores, dashes, or forward-slashes only."
+msgstr "경로에는 소문자 영숫자, 밑줄, 대시 또는 슬래시만 포함되어야 합니다."
+
+#: microstrategy.admin.inc:922
+msgid "Path cannot begin or end with a slash."
+msgstr "경로는 슬래시로 시작하거나 끝날 수 없습니다."
+
+#: microstrategy.admin.inc:934
+msgid "The chosen path is already in use."
+msgstr "선택한 경로가 이미 사용 중입니다."
+
+#: microstrategy.admin.inc:188;202;277;282;330;410;497;501;506;535 microstrategy.pages.inc:620;632 includes/microstrategy.session.inc:110;120;127;264;274;282
+msgid "microstrategy"
+msgstr "microstrategy"
+
+#: microstrategy.pages.inc:13;51
+msgid "%title preferences"
+msgstr "%title 기본 설정"
+
+#: microstrategy.pages.inc:95;635
+msgid "Cancel"
+msgstr "취소"
+
+#: microstrategy.pages.inc:114
+msgid "Enter credential information to connect to MicroStrategy:"
+msgstr "MicroStrategy에 연결하는 신임 정보를 입력:."
+
+#: microstrategy.pages.inc:124
+msgid "Logon"
+msgstr "로그온"
+
+#: microstrategy.pages.inc:131
+msgid "Password"
+msgstr "암호"
+
+#: microstrategy.pages.inc:139
+msgid "Default"
+msgstr "디폴트"
+
+#: microstrategy.pages.inc:140
+msgid "German"
+msgstr "독일어"
+
+#: microstrategy.pages.inc:141
+msgid "Spanish"
+msgstr "스페인어"
+
+#: microstrategy.pages.inc:142
+msgid "English"
+msgstr "영어"
+
+#: microstrategy.pages.inc:143
+msgid "English (UK)"
+msgstr "영어(UK)"
+
+#: microstrategy.pages.inc:144
+msgid "French"
+msgstr "프랑스어"
+
+#: microstrategy.pages.inc:145
+msgid "Italian"
+msgstr "이태리어"
+
+#: microstrategy.pages.inc:146
+msgid "Japanese"
+msgstr "일본어"
+
+#: microstrategy.pages.inc:147
+msgid "Korean"
+msgstr "한국어"
+
+#: microstrategy.pages.inc:148
+msgid "Portuguese (Brazil)"
+msgstr "포루투칼어(브라질)"
+
+#: microstrategy.pages.inc:149
+msgid "Swedish"
+msgstr "스웨덴어"
+
+#: microstrategy.pages.inc:150
+msgid "Chinese (Simplified)"
+msgstr "중국어(약식)"
+
+#: microstrategy.pages.inc:151
+msgid "Chinese (Traditional)"
+msgstr "중국(전통)"
+
+#: microstrategy.pages.inc:155
+msgid "Language"
+msgstr "언어"
+
+#: microstrategy.pages.inc:161
+msgid "Number and Date Format"
+msgstr "숫자와 날짜 포맷"
+
+#: microstrategy.pages.inc:167
+msgid "Metadata"
+msgstr "메타데이터"
+
+#: microstrategy.pages.inc:173
+msgid "Data"
+msgstr "데이터"
+
+#: microstrategy.pages.inc:185;288
+msgid "Select MicroStrategy business intelligence content to display:"
+msgstr "표시할 MicroStrategy business intelligence content를 선택:"
+
+#: microstrategy.pages.inc:197;304
+msgid "Display MicroStrategy Report"
+msgstr "MicroStrategy 리포트 표시:"
+
+#: microstrategy.pages.inc:198;301
+msgid "Display MicroStrategy Folder"
+msgstr "MicroStrategy 폴더 표시"
+
+#: microstrategy.pages.inc:199;302
+msgid "Display MicroStrategy History List"
+msgstr "MicroStrategy 사용내역 표시"
+
+#: microstrategy.pages.inc:200;303
+msgid "Display MicroStrategy Search Page"
+msgstr "MicroStrategy 검색 페이지 표시"
+
+#: microstrategy.pages.inc:201
+msgid "Display MicroStrategy Project Page"
+msgstr "MicroStrategy 프로젝트 페이지 표시"
+
+#: microstrategy.pages.inc:202
+msgid "Display MicroStrategy HTML Document"
+msgstr "MicroStrategy HTML 다큐먼트 표시"
+
+#: microstrategy.pages.inc:203;305
+msgid "Display MicroStrategy Document"
+msgstr "MicroStrategy 다큐먼트 표시"
+
+#: microstrategy.pages.inc:210;239;252;265;313;326;339;368
+msgid "ID"
+msgstr "아이디"
+
+#: microstrategy.pages.inc:222;351
+msgid "Grid"
+msgstr "그리드"
+
+#: microstrategy.pages.inc:223;352
+msgid "Graph"
+msgstr "그래프"
+
+#: microstrategy.pages.inc:224;353
+msgid "Grid and Graph"
+msgstr "그리드와 그래프"
+
+#: microstrategy.pages.inc:230;277;359;380
+msgid "None"
+msgstr "없음"
+
+#: microstrategy.pages.inc:231;278;360;381
+msgid "Flash Visualization"
+msgstr "Flash 시각화"
+
+#: microstrategy.pages.inc:232;279;361;382
+msgid "AJAX Visualization"
+msgstr "AJAX 시각화"
+
+#: microstrategy.pages.inc:300
+msgid "Display MicroStrategy Prompts (using a prompted report)"
+msgstr "MicroStrategy 프롬프트 표시(프롬프트된 리포트 사용)"
+
+#: microstrategy.pages.inc:438;498
+msgid "Load last session settings"
+msgstr "마지막 세션 설정 로드"
+
+#: microstrategy.pages.inc:513
+msgid "Set master block properties"
+msgstr "마스터 블록 속성 설정"
+
+#: microstrategy.pages.inc:518
+msgid "Display Send-to Menu"
+msgstr "보내기 메뉴 표시"
+
+#: microstrategy.pages.inc:528
+msgid "Default Target Block"
+msgstr "기본 대상 블록"
+
+#: microstrategy.pages.inc:540
+msgid "Enable All For Send as Filter"
+msgstr "Enable All For Send as Filter"
+
+#: microstrategy.pages.inc:550
+msgid "Choose display properties:"
+msgstr "표시 속성을 선택:"
+
+#: microstrategy.pages.inc:555
+msgid "Height"
+msgstr "높이"
+
+#: microstrategy.pages.inc:561
+msgid "Width"
+msgstr "너비"
+
+#: microstrategy.pages.inc:567
+msgid "Scrolling"
+msgstr "스크롤링"
+
+#: microstrategy.pages.inc:569
+msgid "Auto"
+msgstr "자동"
+
+#: microstrategy.pages.inc:762;768
+msgid "Report Name or ID cannot be empty!"
+msgstr "리포트명 또는 ID는 비워둘 수 없음!"
+
+#: microstrategy.pages.inc:774
+msgid "Folder Name or ID cannot be empty!"
+msgstr "폴더명 또는 ID는 비워둘 수 없음!"
+
+#: microstrategy.pages.inc:780
+msgid "HTML Document Name or ID cannot be empty!"
+msgstr "HTML다큐먼트명 또는 ID는 비워둘 수 없음!"
+
+#: microstrategy.pages.inc:786
+msgid "Document Name or ID cannot be empty!"
+msgstr "다큐먼트명 또는 ID는 비워둘 수 없음!"
+
+#: microstrategy.pages.inc:620;632
+msgid "%title preferences have been saved."
+msgstr "%title 기본 설정이 저장되었습니다."
+
+#: microstrategy.module:131 microstrategy.info:0
+msgid "Integrate MicroStrategy into Drupal"
+msgstr "MicroStrategy를 Drupal에 통합"
+
+#: microstrategy.module:134;283
+msgid "List, edit, or add MicroStrategy pages and blocks."
+msgstr "MicroStrategy 페이지 및 블록을 나열, 편집 또는 추가합니다."
+
+#: microstrategy.module:137
+msgid "Microstrategy pages are listed below. Each page is accessible from one URL on your site. You can create as many pages as you need and determine the content to display (such as reports, documents, folders, and so on)."
+msgstr "MicroStrategy 페이지가 아래에 나열되어 있습니다. 각 페이지는 사이트의 한 URL에서 접근할 수 있습니다. 페이지를 필요한 만큼 만들고 표시할 컨텐트(예: 리포트, 문서, 폴더 등)를 결정할 수 있습니다."
+
+#: microstrategy.module:140
+msgid "Microstrategy blocks are listed below. Each block is a Drupal block which displays some MicroStrategy content (for example, reports, documents, folders, and so on). You can create as many blocks as you need and determine what content to display. A good practice is to install the <a href='http://drupal.org/project/homebox'>HomeBox</a> module and then add blocks in a Homebox page, to display multiple MicroStrategy content in one page."
+msgstr "MicroStrategy 블록이 아래에 나열되어 있습니다. 각 블록은 일부 MicroStrategy 컨텐트(예: 리포트, 문서, 폴더 등)를 표시하는 Drupal 블록입니다. 블록을 필요한 만큼 만들고 표시할 컨텐트를 결정할 수 있습니다. <a href='http://drupal.org/project/homebox'>HomeBox</a> 모듈을 설치한 다음 Homebox 페이지에 블록을 추가하여 여러 MicroStrategy 컨텐트를 하나의 페이지에 표시하는 것이 좋습니다."
+
+#: microstrategy.module:147
+msgid "Set the settings for the MicroStrategy page. The changes will overwrite default settings."
+msgstr "MicroStrategy 페이지에 대한 설정을 지정합니다. 변경 사항이 기본 설정을 덮어씁니다."
+
+#: microstrategy.module:158
+msgid "Set the settings for the MicroStrategy block. The changes will overwrite default settings."
+msgstr "MicroStrategy 블록에 대한 설정을 지정합니다. 변경 사항이 기본 설정을 덮어씁니다."
+
+#: microstrategy.module:405
+msgid "Target Portlet {0} cannot be found!"
+msgstr "대상 포틀릿 {0}을(를) 찾을 수 없습니다!"
+
+#: microstrategy.module:406
+msgid "Target Portlet {0}  points to different MicroStrategy Project"
+msgstr "대상 포틀릿 {0}이(가) 다른 MicroStrategy 프로젝트를 가리킵니다."
+
+#: microstrategy.module:407
+msgid "Cannot display content because Portlet {0} is in edit mode."
+msgstr "포틀릿 {0}이(가) 편집 모드에 있으므로 컨텐트를 표시할 수 없습니다."
+
+#: microstrategy.module:441
+msgid "New Window"
+msgstr "새 창"
+
+#: microstrategy.module:463;267
+msgid "Preferences"
+msgstr "기본 설정"
+
+#: microstrategy.module:171
+msgid "administer microstrategy"
+msgstr "MicroStrategy 관리"
+
+#: microstrategy.module:171
+msgid "access preferences"
+msgstr "기본 설정 접근"
+
+#: microstrategy.module:262
+msgid "View"
+msgstr "보기"
+
+#: microstrategy.module:282 microstrategy.info:0;0
+msgid "MicroStrategy"
+msgstr "MicroStrategy"
+
+#: microstrategy.module:296
+msgid "List"
+msgstr "목록"
+
+#: microstrategy.module:327
+msgid "Edit page"
+msgstr "페이지 편집"
+
+#: microstrategy.module:336
+msgid "Page Settings"
+msgstr "페이지 설정"
+
+#: microstrategy.module:345
+msgid "Page"
+msgstr "페이지"
+
+#: microstrategy.module:355
+msgid "Block Settings"
+msgstr "블록 설정"
+
+#: microstrategy.module:364
+msgid "Block"
+msgstr "블록"
+
+#: includes/microstrategy.session.inc:111;128;110;120;127;274
+msgid "Creating a session caused an error: %error"
+msgstr "세션 생성 중 오류 발생: %error"
+
+#: includes/microstrategy.session.inc:118;272
+msgid "The response from %task task caused the following error: %error on line %line."
+msgstr "%task 작업의 응답으로 인해 다음 오류 발생: %line 줄의 %error."
+
+#: includes/microstrategy.session.inc:264;282
+msgid "Closing a session for %title caused an error: %error"
+msgstr "%title에 대한 세션을 닫는 중 오류 발생: %error"
+

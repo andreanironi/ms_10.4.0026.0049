@@ -1,0 +1,24 @@
+@CHARSET "ISO-8859-1";
+
+div.mstr-edit-link,
+div.mstr-edit-link a {
+  font-size: 9px;
+  text-decoration: none;
+  background: transparent;
+}
+
+div.mstr-edit-link {  
+  padding: 2px 3px 1px 0;
+  position: absolute;
+  z-index: 20;
+  margin-top: -15px;
+}
+
+div.mstr-edit-link a {
+  color: #cccccc;
+}
+
+div.mstr-edit-link a:hover,
+div.mstr-edit-link a:active {
+  color: #000000;
+}

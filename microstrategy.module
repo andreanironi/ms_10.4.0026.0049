@@ -1,0 +1,1211 @@
+<?php
+
+/**
+* @file
+* MicroStrategy Module.
+*/
+
+//mstr block types
+define('MSTR_TYPE_BASIC', 0); //basic
+define('MSTR_TYPE_MASTER', 1); //master
+
+//mstr default settings page/block ids
+define('MSTR_PAGE_DEFA_SETT_ID', -1);
+define('MSTR_BASIC_BLOCK_DEFA_SETT_ID', -1);
+define('MSTR_MASTER_BLOCK_DEFA_SETT_ID', -2);
+
+//microstrategy locales. EnumPortletLocaleID
+define('MSTR_PORTLET_LOCALE_DEFAULT', 0);
+define('MSTR_PORTLET_LOCALE_GERMAN', 1031);
+define('MSTR_PORTLET_LOCALE_SPANISH', 3082);
+define('MSTR_PORTLET_LOCALE_ENGLISH', 1033);
+define('MSTR_PORTLET_LOCALE_ENGLISH_UK', 2057);
+define('MSTR_PORTLET_LOCALE_FRENCH', 1036);
+define('MSTR_PORTLET_LOCALE_ITALIAN', 1040);
+define('MSTR_PORTLET_LOCALE_JAPANESE', 1041);
+define('MSTR_PORTLET_LOCALE_KOREAN', 1042);
+define('MSTR_PORTLET_LOCALE_PORTUGUESE_BR', 1046);
+define('MSTR_PORTLET_LOCALE_SWEDISH', 1053);
+define('MSTR_PORTLET_LOCALE_CHINESE_S', 2052);
+define('MSTR_PORTLET_LOCALE_CHINESE_T', 1028);
+
+//microstrategy authentication types. EnumDSSXMLAuthModes
+define('DssXmlAuthStandard', 0x01);
+define('DssXmlAuthNTCredential', 0x02);
+define('DssXmlAuthPassThrough', 0x04);
+define('DssXmlAuthAnonymous', 0x08);
+define('DssXmlAuthLDAP', 0x10);
+define('DssXmlAuthWarehousePassthrough', 0x20);
+define('DssXmlAuthSimpleSecurityPlugIn', 0x40);
+define('DssXmlAuthIntegrated', 0x80); //Kerberos
+
+//mstr content types
+define('MSTR_CNT_TYPE_REPORT', 0);
+define('MSTR_CNT_TYPE_FOLDER', 1);
+define('MSTR_CNT_TYPE_HIST_LIST', 2);
+define('MSTR_CNT_TYPE_SEARCH', 3);
+define('MSTR_CNT_TYPE_PROJECT', 4);
+define('MSTR_CNT_TYPE_HTMLDOC', 5);
+define('MSTR_CNT_TYPE_DOC', 6);
+define('MSTR_CNT_TYPE_PROMPT', 7);
+
+//mstr content type identifier
+define('MSTR_CNT_TYPE_IDENTIFIER_ID', 0);
+define('MSTR_CNT_TYPE_IDENTIFIER_NAME', 1);
+
+//session name prefix
+define('MSTR_PAGE_SESSION_STATE', 'microstrategy_page_session_state_');
+define('MSTR_PAGE_SESSION_INFO', 'microstrategy_page_session_info_');
+define('MSTR_BLOCK_SESSION_STATE', 'microstrategy_block_session_state_');
+define('MSTR_BLOCK_SESSION_INFO', 'microstrategy_block_session_info_');
+
+//iframe id prefix, cookie/session name prefix for p2p message
+define('MSTR_PREFIX', 'microstrategy_');
+
+//default settings
+define('DEFAULT_BASE_URL', 'http://localhost:8080/MicroStrategy/servlet/mstrWeb');
+define('DEFAULT_TASK_URL', 'http://localhost:8080/MicroStrategy/servlet/taskProc');
+define('DEFAULT_REPORT_URL', 'evt=4001');
+define('DEFAULT_FOLDER_URL', 'evt=2001');
+define('DEFAULT_HISTORY_URL', 'evt=3018');
+define('DEFAULT_SEARCH_URL', 'evt=3040&src=mstrWeb.portlet2portletBasicSearch');
+define('DEFAULT_PROJECT_URL', 'evt=3010');
+define('DEFAULT_HTMLDOC_URL', 'evt=32001&mstrwid=-1');
+define('DEFAULT_DOC_URL', 'evt=2048001');
+//basic
+define('DEFAULT_BASIC_REPORT_URL', 'evt=4001&src=mstrWeb.portlet2portletSlaveReport');
+define('DEFAULT_BASIC_DOC_URL', 'evt=2048001&src=mstrWeb.portlet2portletSlaveRWD');
+//master
+define('DEFAULT_MASTER_PROMPT_URL', 'evt=4001&src=mstrWeb.portlet2portletMasterPrompt');
+define('DEFAULT_MASTER_FOLDER_URL', 'evt=2001&src=mstrWeb.portlet2portletMasterFolderList');
+define('DEFAULT_MASTER_HISTORY_URL', 'evt=3018&src=mstrWeb.portlet2portletMasterHistoryList');
+define('DEFAULT_MASTER_SEARCH_URL', 'evt=3040&src=mstrWeb.portlet2portletMasterSearchPage');
+define('DEFAULT_MASTER_REPORT_URL', 'evt=4001&src=mstrWeb.portlet2portletMasterReport');
+define('DEFAULT_MASTER_DOC_URL', 'evt=2048001&src=mstrWeb.portlet2portletMasterDocument');
+//server
+define('DEFAULT_ISERVER_NAME', 'localhost');
+define('DEFAULT_ISERVER_PORT', 0);
+define('DEFAULT_PROJECT', 'MicroStrategy Tutorial');
+define('DEFAULT_SHOW_LOCALE', 1);
+define('DEFAULT_AUTH_MODE', DssXmlAuthStandard);
+define('DEFAULT_WORKING_SET_SIZE', 1);
+define('DEFAULT_CANCEL_PENDING_REQUEST', 0);
+define('DEFAULT_REMOVE_HISTORY_JOBS', 2);
+
+//default preferences
+define('DEFAULT_CNT_TYPE', MSTR_CNT_TYPE_REPORT);
+define('DEFAULT_REPORT_NAME_TYPE', MSTR_CNT_TYPE_IDENTIFIER_ID);
+define('DEFAULT_REPORT_NAME', 'A20C8AC711D60AE310008BB3D1CEE6A4'); //Regional Profit and Margins
+define('DEFAULT_REPORT_VIEW_MODE', 1); //Grid
+define('DEFAULT_REPORT_VISUALIZATION', 0); //None
+define('DEFAULT_FOLDER_NAME_TYPE', MSTR_CNT_TYPE_IDENTIFIER_ID);
+define('DEFAULT_FOLDER_NAME', '78AAF4654A62E9D384D0E094BE585507'); //Customer Analysis
+define('DEFAULT_HTMLDOC_NAME_TYPE', MSTR_CNT_TYPE_IDENTIFIER_ID);
+define('DEFAULT_HTMLDOC_NAME', 'DBD4C63011D60557C0008C916B98494F'); //US Revenues by Region
+define('DEFAULT_DOC_NAME_TYPE', MSTR_CNT_TYPE_IDENTIFIER_ID);
+define('DEFAULT_DOC_NAME', '374377BE47BA3CE179B10AAF592782E7'); //Enterprise Performance Management Dashboard
+define('DEFAULT_DOC_VIEW_MODE', 0); //None
+define('DEFAULT_HEIGHT', '600');
+define('DEFAULT_WIDTH', '100%');
+define('DEFAULT_SCROLLING', 0); //Auto
+//master
+define('DEFAULT_MASTER_CNT_TYPE', MSTR_CNT_TYPE_FOLDER);
+define('DEFAULT_MASTER_PROMPT_NAME_TYPE', MSTR_CNT_TYPE_IDENTIFIER_ID);
+define('DEFAULT_MASTER_PROMPT_NAME', 'D08450DF4E71E2068B9AE78845C1BA28'); //Revenue vs. Forecast
+define('DEFAULT_MASTER_DOC_NAME', '18D8D2824E43A33D039C698AB4975706'); //Balanced Scorecard
+define('DEFAULT_MASTER_SHOW_SENDTO', 1); //Yes
+define('DEFAULT_MASTER_ENABLE_ALL', 1); //Yes
+
+/**
+ * Implementation of hook_help
+ * Display help and module information
+ * @param path which path of the site we're displaying help
+ * @param arg array that holds the current path as would be returned from arg() function
+ * @return help text for the path
+ */
+function microstrategy_help($path, $arg) {
+  //$output = '<p>'.  t("Integrate MicroStrategy into Drupal");
+  //    The line above outputs in ALL admin/module pages
+  $output = '';
+  switch ($path) {
+    case "admin/help#microstrategy":
+      $output = '<p>'.  t("Integrate MicroStrategy into Drupal") .'</p>';
+      break;
+    case 'admin/structure/microstrategy':
+      $output = '<p>'.  t("List, edit, or add MicroStrategy pages and blocks.") .'</p>';
+      break;
+    case 'admin/structure/microstrategy/page':
+    case 'admin/structure/microstrategy/page/list':
+      $output .= '<p>'. t("Microstrategy pages are listed below. Each page is accessible from one URL on your site. You can create as many pages as you need and determine the content to display (such as reports, documents, folders, and so on).") .'</p>';
+      break;
+    case 'admin/structure/microstrategy/block':
+      $output .= '<p>'. t("Microstrategy blocks are listed below. Each block is a Drupal block which displays some MicroStrategy content (for example, reports, documents, folders, and so on). You can create as many blocks as you need and determine what content to display. A good practice is to install the <a href='http://drupal.org/project/homebox'>HomeBox</a> module and then add blocks in a Homebox page, to display multiple MicroStrategy content in one page.") .'</p>';
+      break;
+    case 'admin/structure/microstrategy/page/%/settings':
+      if ($arg[4] == MSTR_PAGE_DEFA_SETT_ID) {
+        $output = '<p>'.  t("Set the default settings for MicroStrategy pages. The changes are applied to any newly added pages, as well as non-customized existing pages.") .'</p>';
+      }
+      else {
+        $output = '<p>'.  t("Set the settings for the MicroStrategy page. The changes will overwrite default settings.") .'</p>';
+      }
+      break;
+    case 'admin/structure/microstrategy/block/%/settings':
+      if ($arg[4] == MSTR_BASIC_BLOCK_DEFA_SETT_ID) {
+        $output = '<p>'.  t("Set the default settings for MicroStrategy basic blocks. The changes are applied to any newly added basic blocks, as well as non-customized existing basic blocks.") .'</p>';
+      }
+      elseif ($arg[4] == MSTR_MASTER_BLOCK_DEFA_SETT_ID) {
+        $output = '<p>'.  t("Set the default settings for MicroStrategy master blocks. The changes are applied to any newly added master blocks, as well as non-customized existing master blocks.") .'</p>';
+      }
+      else {
+        $output = '<p>'.  t("Set the settings for the MicroStrategy block. The changes will overwrite default settings.") .'</p>';
+      }
+      break;
+  }
+  return $output;
+} // function microstrategy_help
+
+/**
+ * Implementation of hook_permission().
+ * Valid permissions for this module
+ * @return array An array of valid permissions for the microstrategy module
+ */
+function microstrategy_permission() {
+  $permissions = array(
+    'administer microstrategy' => array(
+      'title' => t('Administer microstrategy')
+    ),
+    'access preferences' => array(
+      'title' => t('Access preferences')
+    )
+  );
+
+  return $permissions;
+}
+
+/**
+ * Implementation of hook_user_logout().
+ *
+ */
+function hook_user_logout($account) {
+  module_load_include('inc', 'microstrategy', 'includes/microstrategy.session');
+  microstrategy_close_all_sessions();
+}
+
+/**
+ * Implementation of hook_block_info().
+ * We provide a basic MicroStrategy block and a master MicroStrategy block.
+ * You can add the blocks in a HomeBox page to perform P2P.
+ */
+function microstrategy_block_info() {
+  $blocks = array();
+  $mstr_blocks = microstrategy_get_blocks();
+  if (is_array($mstr_blocks) && !empty($mstr_blocks)) {
+    foreach ($mstr_blocks as $item) {
+      $title = _microstrategy_get_block_title($item->bid);
+      $blocks[$item->bid] = array(
+        'info' => $title,
+        'cache' => DRUPAL_NO_CACHE,
+      );
+    }
+  }
+  return $blocks;
+}
+
+/**
+ * Implementation of hook_block_view().
+ * Return a rendered or renderable view of a block.
+ */
+function microstrategy_block_view($delta = '') {
+  //build iframe for the block
+  _microstrategy_block_view_load_js();
+  _microstrategy_move_message_from_cookie_to_session($delta);
+  $title = _microstrategy_get_block_title($delta);
+  $block['subject'] = check_plain($title);
+  $block['content'] = _microstrategy_block_edit_link($delta) . _microstrategy_build_block_iframe_src($delta);
+  return $block;
+}
+
+/**
+ * Implementation of hook_theme().
+ */
+function microstrategy_theme() {
+  return array(
+    'microstrategy_page_admin_form' => array(
+      'render element' => 'form',
+      'file' => 'microstrategy.admin.inc',
+    ),
+    'microstrategy_block_admin_form' => array(
+      'render element' => 'form',
+      'file' => 'microstrategy.admin.inc',
+    ),
+    'microstrategy_content' => array(
+      'render element' => 'form',
+      'file' => 'microstrategy.pages.inc',
+    ),
+    'microstrategy_master_content' => array(
+      'render element' => 'form',
+      'file' => 'microstrategy.pages.inc',
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_menu().
+ */
+function microstrategy_menu() {
+
+  $items = array();
+
+  // MicroStrategy pages
+  $pages = microstrategy_get_pages();
+  if (is_array($pages) && count($pages) > 0) {
+    foreach ($pages as $page) {
+      if ($page->path && !empty($page->path)) {
+        $items[$page->path] = array(
+          'title' => $page->title,
+          'page callback' => '_microstrategy_build_page_iframe_src',
+          'page arguments' => array($page),
+          'access callback' => '_microstrategy_user_access_page',
+          'access arguments' => array($page),
+          'type' => $page->menu ? MENU_NORMAL_ITEM : MENU_CALLBACK,
+        );
+        $items[$page->path . '/view'] = array(
+          'title' => 'View',
+          'type' => MENU_DEFAULT_LOCAL_TASK,
+          'weight' => -10,
+        );
+        $items[$page->path . '/preferences'] = array(
+          'title' => 'Preferences',
+          'page callback' => 'drupal_get_form',
+          'page arguments' => array('microstrategy_page_preferences_form', $page),
+          'access callback' => 'user_access',
+          'access arguments' => array('access preferences'),
+          'type' => MENU_LOCAL_TASK,
+          'file' => 'microstrategy.pages.inc',
+          'weight' => 1,
+        );
+      }
+    }
+  }
+
+  // Admin related tasks
+  $items['admin/structure/microstrategy'] = array(
+    'title' => 'MicroStrategy',
+    'description' => "List, edit, or add MicroStrategy pages and blocks.",
+    'page callback' => 'microstrategy_overview_page',
+    'access arguments' => array('administer microstrategy'),
+    'file' => 'microstrategy.admin.inc',
+  );
+  $items['admin/structure/microstrategy/page'] = array(
+    'title' => 'Pages',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('microstrategy_page_admin_form'),
+    'access arguments' => array('administer microstrategy'),
+    'file' => 'microstrategy.admin.inc',
+  );
+  $items['admin/structure/microstrategy/page/list'] = array(
+    'title' => 'List',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('microstrategy_page_admin_form'),
+    'access arguments' => array('administer microstrategy'),
+    'file' => 'microstrategy.admin.inc',
+    'type' => MENU_LOCAL_TASK,
+  );
+  $items['admin/structure/microstrategy/page/add'] = array(
+    'title' => 'Add page',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('microstrategy_page_edit_form'),
+    'access arguments' => array('administer microstrategy'),
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'microstrategy.admin.inc',
+    'weight' => 1,
+  );
+  $items['admin/structure/microstrategy/block'] = array(
+    'title' => 'Blocks',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('microstrategy_block_admin_form'),
+    'access callback' => 'user_access',
+    'access arguments' => array('administer microstrategy'),
+    'file' => 'microstrategy.admin.inc',
+    'weight' => 2,
+  );
+  $items['admin/structure/microstrategy/defaultsettings'] = array(
+    'title' => 'Default Settings',
+    'page callback' => 'microstrategy_default_settings_page',
+    'access callback' => 'user_access',
+    'access arguments' => array('administer microstrategy'),
+    'file' => 'microstrategy.admin.inc',
+    'weight' => 3,
+  );
+
+  $items['admin/structure/microstrategy/page/%/edit'] = array(
+    'title' => 'Edit page',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('microstrategy_page_edit_form', 4),
+    'access callback' => 'user_access',
+    'access arguments' => array('administer microstrategy'),
+    'type' => MENU_CALLBACK,
+    'file' => 'microstrategy.admin.inc',
+  );
+  $items['admin/structure/microstrategy/page/%/settings'] = array(
+    'title' => 'Page Settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('microstrategy_page_settings_form', 4),
+    'access callback' => 'user_access',
+    'access arguments' => array('administer microstrategy'),
+    'type' => MENU_CALLBACK,
+    'file' => 'microstrategy.admin.inc',
+  );
+  $items['admin/structure/microstrategy/page/%/delete'] = array(
+      'title' => 'Page',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('microstrategy_page_delete_form', 4),
+      'access callback' => 'user_access',
+      'access arguments' => array('administer microstrategy'),
+      'type' => MENU_CALLBACK,
+      'file' => 'microstrategy.admin.inc',
+  );
+
+  $items['admin/structure/microstrategy/block/%/settings'] = array(
+      'title' => 'Block Settings',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('microstrategy_block_settings_form', 4),
+      'access callback' => 'user_access',
+      'access arguments' => array('administer microstrategy'),
+      'type' => MENU_CALLBACK,
+      'file' => 'microstrategy.admin.inc',
+  );
+  $items['admin/structure/microstrategy/block/%/delete'] = array(
+      'title' => 'Block',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('microstrategy_block_delete_form', 4),
+      'access callback' => 'user_access',
+      'access arguments' => array('administer microstrategy'),
+      'type' => MENU_CALLBACK,
+      'file' => 'microstrategy.admin.inc',
+  );
+
+  // MicroStrategy Block preferences
+  $items['microstrategy/block/%/preferences'] = array(
+      //'title' => 'MicroStategy Preferences',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('microstrategy_block_preferences_form', 2),
+      'access callback' => 'user_access',
+      'access arguments' => array('access preferences'),
+      'type' => MENU_CALLBACK,
+      'file' => 'microstrategy.pages.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Load js files for block view page.
+ *
+ */
+function _microstrategy_block_view_load_js() {
+  if (function_exists('drupal_get_path')) {
+    $path = drupal_get_path('module', 'microstrategy');
+    drupal_add_js($path .'/js/microstrategy.js');
+    drupal_add_css($path .'/microstrategy.css');
+    drupal_add_js($path .'/js/cookiesUtils.js');
+    drupal_add_js($path .'/js/mstrPortlet.js');
+    drupal_add_js($path .'/js/mstrPortletView.js');
+    drupal_add_js($path .'/js/mstrPortletViewMessageCenter.js');
+    drupal_add_js($path .'/js/mstrPortletViewMessageInfo.js');
+    //add localized strings
+    $inline_js =
+      "if (typeof(mstrPortletViewDescriptors) == 'undefined') {
+        var mstrPortletViewDescriptors = new Object();
+        mstrPortletViewDescriptors['portletNotFound']='" . t('Target Portlet {0} cannot be found!') . "';
+        mstrPortletViewDescriptors['portletDiffProject']='" . t('Target Portlet {0}  points to different MicroStrategy Project'). "';
+        mstrPortletViewDescriptors['portletDesignMode']='" . t('Cannot display content because Portlet {0} is in edit mode.') . "';
+      }";
+    drupal_add_js($inline_js, 'inline');
+    //lift domain
+    $lift_domain_js = "if (typeof(window.postMessage) == 'undefined') {mstrPortlet.liftDomain();}";
+    drupal_add_js($lift_domain_js, 'inline');
+  }
+  drupal_add_js(
+    array('microstrategy' => array('hover_links' => variable_get('microstrategy_hover_links', 1))),
+        'setting');
+}
+
+/**
+ * Load js files for basic block preference page.
+ */
+function _microstrategy_block_preference_load_js() {
+  if (function_exists('drupal_get_path')) {
+    $path = drupal_get_path('module', 'microstrategy');
+    drupal_add_js($path .'/js/mstrPortletDescriptors.js');
+    drupal_add_js($path .'/js/mstrPortlet.js');
+    drupal_add_js($path .'/js/mstrPortletEdit.js');
+  }
+}
+
+/**
+ * Load js files for master block preference page.
+ */
+function _microstrategy_master_block_preference_load_js() {
+  if (function_exists('drupal_get_path')) {
+    $path = drupal_get_path('module', 'microstrategy');
+    drupal_add_js($path .'/js/mstrPortletDescriptors.js');
+    drupal_add_js($path .'/js/mstrPortlet.js');
+    drupal_add_js($path .'/js/mstrPortletMasterEdit.js');
+    //add localized strings
+    drupal_add_js("mstrPortletDescriptors['newWindow']='" . t('New Window'). "';", 'inline');
+    //add onload event handler to build the drop-down
+    $build_drop_down_js =
+      "if(window.addEventListener) { /*Firefox*/
+          window.addEventListener('load', mstrPortletMasterEdit.buildTargetPortletDropDown, false);
+      }
+      else if(window.attachEvent) { /*IE*/
+          window.attachEvent('onload', mstrPortletMasterEdit.buildTargetPortletDropDown);
+      }";
+    drupal_add_js($build_drop_down_js, 'inline');
+  }
+}
+
+/**
+ * Buid block preferences link.
+ * @param $delta block delta.
+ * @return the link of HTML format.
+ */
+function _microstrategy_block_edit_link($delta) {
+  $output = '';
+  $options = array( "query" => drupal_get_destination() );
+  if (user_access('access preferences')) {
+    $url = "microstrategy/block/$delta/preferences";
+    $output .= " " . l("[" . t("Preferences") . "]", $url, $options );
+  }
+  $more_link = "<div class='mstr-edit-link'>" . $output . "</div>";
+  return $more_link;
+}
+
+/**
+ * Build block iframe source.
+ * @param $delta block delta.
+ * @return the iframe source of HTML format.
+ */
+function _microstrategy_build_block_iframe_src($delta) {
+  $config = _microstrategy_get_block_merged_preferences($delta);
+  $config['id'] = $delta;
+  $config['isblock'] = TRUE;
+  $config['title'] = _microstrategy_get_block_title($delta);
+  $config['ismaster'] = _microstrategy_get_block_type($delta) == MSTR_TYPE_MASTER;
+  module_load_include('inc', 'microstrategy', 'includes/microstrategy.iframe');
+
+  return microstrategy_build_iframe_code($config);
+}
+
+/**
+ * Build page iframe source.
+ * @param $page page.
+ * @return the iframe source of HTML format.
+ */
+function _microstrategy_build_page_iframe_src($page) {
+
+  $config = _microstrategy_get_page_merged_preferences($page->pid);
+  $config['id'] = $page->pid;
+  $config['title'] = $page->title;
+  $config['ismaster'] = FALSE;
+  $config['ispage'] = TRUE;
+  module_load_include('inc', 'microstrategy', 'includes/microstrategy.iframe');
+
+  return microstrategy_build_iframe_code($config);
+}
+
+/**
+ * Retrieve an array of all MicroStrategy pages.
+ *
+ * @return
+ *   An associative array of MicroStrategy pages.
+ */
+function microstrategy_get_pages() {
+
+  $result = db_query('SELECT * FROM {microstrategy_pages}');
+
+  foreach ($result as $page) {
+    $pages[] = $page;
+  }
+
+  return empty($pages) ? NULL : $pages;
+}
+
+/**
+ * Retrieve an array of all MicroStrategy blocks.
+ *
+ * @return
+ *   An associative array of MicroStrategy blocks.
+ */
+function microstrategy_get_blocks() {
+
+  $result = db_query('SELECT * FROM {microstrategy_blocks}');
+
+  foreach ($result as $block) {
+    $blocks[] = $block;
+  }
+
+  return empty($blocks) ? NULL : $blocks;
+}
+
+/**
+ * Delete one microstrategy page.
+ *
+ * @param $pid
+ *   A valid microstrategy page id.
+ */
+function _microstrategy_page_delete($pid) {
+
+  if (isset($pid)) {
+
+    //delete from db
+    db_delete('microstrategy_pages')
+      ->condition('pid', $pid)
+      ->execute();
+    db_delete('microstrategy_pages_roles')
+      ->condition('pid', $pid)
+      ->execute();
+    db_delete('microstrategy_settings')
+      ->condition('pid', $pid)
+      ->execute();
+    db_delete('microstrategy_preferences')
+      ->condition('pid', $pid)
+      ->execute();
+
+    //rebuild menu
+    menu_rebuild();
+
+    //close session
+    module_load_include('inc', 'microstrategy', 'includes/microstrategy.session');
+    microstrategy_close_page_session($pid);
+
+  }
+
+}
+
+/**
+ * Delete one microstrategy block.
+ *
+ * @param $bid
+ *   A valid microstrategy block id.
+ */
+function _microstrategy_block_delete($bid) {
+
+  if (isset($bid)) {
+
+    //delete from db
+    db_delete('block')
+      ->condition('module', 'microstrategy')
+      ->condition('delta', $bid)
+      ->execute();
+    db_delete('microstrategy_blocks')
+      ->condition('bid', $bid)
+      ->execute();
+    db_delete('microstrategy_settings')
+      ->condition('bid', $bid)
+      ->execute();
+    db_delete('microstrategy_preferences')
+      ->condition('bid', $bid)
+      ->execute();
+
+    //close session
+    module_load_include('inc', 'microstrategy', 'includes/microstrategy.session');
+    microstrategy_close_block_session($bid);
+  }
+
+}
+
+function _microstrategy_get_page_title($pid) {
+  $query = db_query("SELECT title FROM {microstrategy_pages} WHERE pid = :pid", array(':pid' => $pid));
+  $title = $query->fetchField();
+  if (empty($title)) {
+    $title = "MicroStrategy Page " . $pid;
+  }
+  return $title;
+}
+
+function _microstrategy_get_block_title($bid) {
+  $query = db_query("SELECT title FROM {block} WHERE module = 'microstrategy' AND delta = :delta", array(':delta' => $bid));
+  $title = $query->fetchField();
+  if (empty($title)) {
+    $query = db_query("SELECT title FROM {microstrategy_blocks} WHERE bid = :bid", array(':bid' => $bid));
+    $title = $query->fetchField();
+  }
+  if (empty($title)) {
+    $title = "MicroStrategy Block " . $bid;
+  }
+  return $title;
+}
+
+function _microstrategy_get_block_type($bid) {
+  if ($bid == MSTR_BASIC_BLOCK_DEFA_SETT_ID) {
+    return MSTR_TYPE_BASIC;
+  }
+  elseif ($bid == MSTR_MASTER_BLOCK_DEFA_SETT_ID) {
+    return MSTR_TYPE_MASTER;
+  }
+  else {
+    $query = db_query("SELECT type FROM {microstrategy_blocks} WHERE bid = :bid", array(':bid' => $bid));
+    $type = $query->fetchField();
+    return $type;
+  }
+}
+
+/**
+ * Return settings of one MicroStrategy page.
+ * @param $pid A valid MicroStrategy page id.
+ * @return settings (of type array).
+ */
+function _microstrategy_get_page_settings($pid) {
+
+  //1. try to get customized settings.
+  $result = _microstrategy_fetch_db_settings($pid, 0);
+
+  //2. if customized settings are not found, try to get customized default settings.
+  if (!$result && $pid > 0) {
+    $result = _microstrategy_fetch_db_settings(MSTR_PAGE_DEFA_SETT_ID, 0);
+  }
+
+  //3. if failed in 1 and 2, get default settings in hard code.
+  if (!$result) {
+    $result = array(
+        'pid' => $pid,
+        //url
+        'base_url' => DEFAULT_BASE_URL,
+        'task_url' => DEFAULT_TASK_URL,
+        'report_url' => DEFAULT_REPORT_URL,
+        'folder_url' => DEFAULT_FOLDER_URL,
+        'history_url' => DEFAULT_HISTORY_URL,
+        'search_url' => DEFAULT_SEARCH_URL,
+        'project_url' => DEFAULT_PROJECT_URL,
+        'htmldoc_url' => DEFAULT_HTMLDOC_URL,
+        'doc_url' => DEFAULT_DOC_URL,
+        //server
+        'iserver' => DEFAULT_ISERVER_NAME,
+        'port' => DEFAULT_ISERVER_PORT,
+        'sso_namespace' => '',
+        'project' => DEFAULT_PROJECT,
+        'authmode' => DEFAULT_AUTH_MODE,
+        'show_locale' => DEFAULT_SHOW_LOCALE,
+        'working_set_size' => DEFAULT_WORKING_SET_SIZE,
+        'cancel_pending_request' => DEFAULT_CANCEL_PENDING_REQUEST,
+        'remove_history_jobs' => DEFAULT_REMOVE_HISTORY_JOBS,
+        'type' => DEFAULT_CNT_TYPE,
+        //default preferences
+        'report_name_type' => DEFAULT_REPORT_NAME_TYPE,
+        'report_name' => DEFAULT_REPORT_NAME,
+        'folder_name_type' => DEFAULT_FOLDER_NAME_TYPE,
+        'folder_name' => DEFAULT_FOLDER_NAME,
+        'htmldoc_name_type' => DEFAULT_HTMLDOC_NAME_TYPE,
+        'htmldoc_name' => DEFAULT_HTMLDOC_NAME,
+        'doc_name_type' => DEFAULT_DOC_NAME_TYPE,
+        'doc_name' => DEFAULT_DOC_NAME,
+        'report_view_mode' => DEFAULT_REPORT_VIEW_MODE,
+        'report_visualization' => DEFAULT_REPORT_VISUALIZATION,
+        'document_view_mode' => DEFAULT_DOC_VIEW_MODE,
+        'height' => DEFAULT_HEIGHT,
+        'width' => DEFAULT_WIDTH,
+        'scrolling' => DEFAULT_SCROLLING,
+      );
+  }
+
+  $result['pid'] = $pid;
+
+  return $result;
+
+}
+
+/**
+ * Return settings for one MicroStrategy block.
+ * @param $bid A valid MicroStrategy block id.
+ * @return settings (of type array).
+ */
+function _microstrategy_get_block_settings($bid) {
+
+  //1. try to get customized settings.
+  $result = _microstrategy_fetch_db_settings(0, $bid);
+
+  //2. if customized settings are not found, try to get customized default settings.
+  $block_type = _microstrategy_get_block_type($bid);
+  if (!$result && $bid > 0) {
+    if ($block_type == MSTR_TYPE_BASIC) {
+      $result = _microstrategy_fetch_db_settings(0, MSTR_BASIC_BLOCK_DEFA_SETT_ID);
+    }
+    elseif ($block_type == MSTR_TYPE_MASTER) {
+      $result = _microstrategy_fetch_db_settings(0, MSTR_MASTER_BLOCK_DEFA_SETT_ID);
+    }
+  }
+
+  //3. if failed in 1 and 2, get default settings in hard code.
+  if (!$result) {
+    if ($block_type == MSTR_TYPE_BASIC) {
+      $result = array(
+        'bid' => $bid,
+        //url
+        'base_url' => DEFAULT_BASE_URL,
+        'task_url' => DEFAULT_TASK_URL,
+        'report_url' => DEFAULT_BASIC_REPORT_URL,
+        'folder_url' => DEFAULT_FOLDER_URL,
+        'history_url' => DEFAULT_HISTORY_URL,
+        'search_url' => DEFAULT_SEARCH_URL,
+        'project_url' => DEFAULT_PROJECT_URL,
+        'htmldoc_url' => DEFAULT_HTMLDOC_URL,
+        'doc_url' => DEFAULT_BASIC_DOC_URL,
+        //server
+        'iserver' => DEFAULT_ISERVER_NAME,
+        'port' => DEFAULT_ISERVER_PORT,
+        'sso_namespace' => '',
+        'project' => DEFAULT_PROJECT,
+        'authmode' => DEFAULT_AUTH_MODE,
+        'show_locale' => DEFAULT_SHOW_LOCALE,
+        'working_set_size' => DEFAULT_WORKING_SET_SIZE,
+        'cancel_pending_request' => DEFAULT_CANCEL_PENDING_REQUEST,
+        'remove_history_jobs' => DEFAULT_REMOVE_HISTORY_JOBS,
+        //default preferences
+        'type' => DEFAULT_CNT_TYPE,
+        'report_name_type' => DEFAULT_REPORT_NAME_TYPE,
+        'report_name' => DEFAULT_REPORT_NAME,
+        'folder_name_type' => DEFAULT_FOLDER_NAME_TYPE,
+        'folder_name' => DEFAULT_FOLDER_NAME,
+        'htmldoc_name_type' => DEFAULT_HTMLDOC_NAME_TYPE,
+        'htmldoc_name' => DEFAULT_HTMLDOC_NAME,
+        'doc_name_type' => DEFAULT_DOC_NAME_TYPE,
+        'doc_name' => DEFAULT_DOC_NAME,
+        'report_view_mode' => DEFAULT_REPORT_VIEW_MODE,
+        'report_visualization' => DEFAULT_REPORT_VISUALIZATION,
+        'document_view_mode' => DEFAULT_DOC_VIEW_MODE,
+        'height' => DEFAULT_HEIGHT,
+        'width' => DEFAULT_WIDTH,
+        'scrolling' => DEFAULT_SCROLLING,
+      );
+    }
+    elseif ($block_type == MSTR_TYPE_MASTER) {
+      $result = array(
+        'bid' => $bid,
+        //url
+        'base_url' => DEFAULT_BASE_URL,
+        'task_url' => DEFAULT_TASK_URL,
+        'prompt_url' => DEFAULT_MASTER_PROMPT_URL,
+        'folder_url' => DEFAULT_MASTER_FOLDER_URL,
+        'history_url' => DEFAULT_MASTER_HISTORY_URL,
+        'search_url' => DEFAULT_MASTER_SEARCH_URL,
+        'report_url' => DEFAULT_MASTER_REPORT_URL,
+        'doc_url' => DEFAULT_MASTER_DOC_URL,
+        //server
+        'iserver' => DEFAULT_ISERVER_NAME,
+        'port' => DEFAULT_ISERVER_PORT,
+        'sso_namespace' => '',
+        'project' => DEFAULT_PROJECT,
+        'authmode' => DEFAULT_AUTH_MODE,
+        'show_locale' => DEFAULT_SHOW_LOCALE,
+        'working_set_size' => DEFAULT_WORKING_SET_SIZE,
+        'cancel_pending_request' => DEFAULT_CANCEL_PENDING_REQUEST,
+        'remove_history_jobs' => DEFAULT_REMOVE_HISTORY_JOBS,
+        //default preferences
+        'type' => DEFAULT_MASTER_CNT_TYPE,
+        'prompt_name_type' => DEFAULT_MASTER_PROMPT_NAME_TYPE,
+        'prompt_name' => DEFAULT_MASTER_PROMPT_NAME,
+        'folder_name_type' => DEFAULT_FOLDER_NAME_TYPE,
+        'folder_name' => DEFAULT_FOLDER_NAME,
+      	'report_name_type' => DEFAULT_REPORT_NAME_TYPE,
+        'report_name' => DEFAULT_REPORT_NAME,
+        'doc_name_type' => DEFAULT_DOC_NAME_TYPE,
+        'doc_name' => DEFAULT_MASTER_DOC_NAME,
+        'report_view_mode' => DEFAULT_REPORT_VIEW_MODE,
+        'report_visualization' => DEFAULT_REPORT_VISUALIZATION,
+        'document_view_mode' => DEFAULT_DOC_VIEW_MODE,
+        'height' => DEFAULT_HEIGHT,
+        'width' => DEFAULT_WIDTH,
+        'scrolling' => DEFAULT_SCROLLING,
+        'show_sendto' => DEFAULT_MASTER_SHOW_SENDTO,
+      	'enable_all_for_send_as_filter' => DEFAULT_MASTER_ENABLE_ALL
+      );
+    }
+  }
+
+  $result['bid'] = $bid;
+
+  return $result;
+}
+
+function _microstrategy_fetch_db_settings($pid, $bid) {
+  $query = db_query("SELECT * FROM {microstrategy_settings} WHERE bid = :bid AND pid = :pid", array(':bid' => $bid, ':pid' => $pid));
+  return $query->fetchAssoc();
+}
+
+function _microstrategy_get_page_preferences($pid) {
+  return _microstrategy_fetch_db_preferences($pid, 0);
+}
+
+function _microstrategy_get_block_preferences($bid) {
+  return _microstrategy_fetch_db_preferences(0, $bid);
+}
+
+function _microstrategy_fetch_db_preferences($pid, $bid) {
+  global $user;
+  $query = db_query("SELECT * FROM {microstrategy_preferences} WHERE uid = :uid AND bid = :bid AND pid = :pid", array(
+    ':uid' => $user->uid,
+    ':bid' => $bid,
+    ':pid' => $pid,
+    ));
+  return $query->fetchAssoc();
+}
+
+/**
+ * Return merged preferences and settings of one MicroStrategy page.
+ * If page preferences are not found, then return page settings.
+ * If page preferences are found, overwrite settings values with
+ * preferences values and then return settings.
+ * @param $pid A valid MicroStrategy page id.
+ * @return page preferences (of type array).
+ */
+function _microstrategy_get_page_merged_preferences($pid) {
+
+  $default_configure = _microstrategy_get_page_settings($pid);
+  $user_configure = _microstrategy_get_page_preferences($pid);
+
+  if (!$default_configure && !$user_configure) {
+    return array('pid' => $pid);
+  }
+
+  if ($user_configure) {
+    return array_merge($default_configure, $user_configure);
+  }
+  else {
+    return $default_configure;
+  }
+
+}
+
+/**
+ * Return merged preferences and settings of one MicroStrategy block.
+ * If block preferences are not found, then return block settings.
+ * If block preferences are found, overwrite settings values with
+ * preferences values and then return settings.
+ * @param $bid A valid MicroStrategy block id.
+ * @return block preferences (of type array).
+ */
+function _microstrategy_get_block_merged_preferences($bid) {
+
+  $default_configure = _microstrategy_get_block_settings($bid);
+  $user_configure = _microstrategy_get_block_preferences($bid);
+
+  if (!$default_configure && !$user_configure) {
+    return array('bid' => $bid);
+  }
+
+  if ($user_configure) {
+    return array_merge($default_configure, $user_configure);
+  }
+  else {
+    return $default_configure;
+  }
+
+}
+
+function _microstrategy_get_page_task_url($pid) {
+  //customized settings
+  $query = db_query("SELECT task_url FROM {microstrategy_settings} WHERE bid = :bid AND pid = :pid", array(':bid' => 0, ':pid' => MSTR_PAGE_DEFA_SETT_ID));
+  $result = $query->fetchField();
+  if (!$result && $pid > 0) {
+    //customized default settings
+    $query = db_query("SELECT task_url FROM {microstrategy_settings} WHERE bid = :bid AND pid = :pid", array(':bid' => 0, ':pid' => $pid));
+    $result = $query->fetchField();
+  }
+  if (!$result) {
+    //default settings
+    $result = DEFAULT_TASK_URL;
+  }
+  return $result;
+}
+
+function _microstrategy_get_block_task_url($bid) {
+  //customized settings
+  $query = db_query("SELECT task_url FROM {microstrategy_settings} WHERE bid = :bid AND pid = :pid", array(':bid' => $bid, ':pid' => 0));
+  $result = $query->fetchField();
+  if (!$result && $bid > 0) {
+    //customized default settings
+    $block_type = _microstrategy_get_block_type($bid);
+    if ($block_type == MSTR_TYPE_BASIC) {
+      $query = db_query("SELECT task_url FROM {microstrategy_settings} WHERE bid = :bid AND pid = :pid", array(':bid' => MSTR_BASIC_BLOCK_DEFA_SETT_ID, ':pid' => 0));
+    }
+    elseif ($block_type == MSTR_TYPE_MASTER) {
+      $query = db_query("SELECT task_url FROM {microstrategy_settings} WHERE bid = :bid AND pid = :pid", array(':bid' => MSTR_MASTER_BLOCK_DEFA_SETT_ID, ':pid' => 0));
+    }
+    $result = $query->fetchField();
+  }
+  if (!$result) {
+    //default settings
+    $result = DEFAULT_TASK_URL;
+  }
+  return $result;
+}
+
+// Whether to use client session.
+function _microstrategy_use_client_session($authmode) {
+  return $authmode == DssXmlAuthNTCredential
+      || $authmode == DssXmlAuthIntegrated
+      || $authmode == DssXmlAuthSimpleSecurityPlugIn;
+}
+
+/**
+ * Move microstrategy p2p message from cookie to session.
+ * @param $bid block id
+ */
+function _microstrategy_move_message_from_cookie_to_session($bid) {
+  $name = MSTR_PREFIX . $bid;
+  if (isset($_COOKIE[$name]) && !empty($_COOKIE[$name])) {
+    $_SESSION[$name] = $_COOKIE[$name];
+    setcookie($name, '', time() - 42000, '/'); //delete cookie
+  }
+}
+
+/**
+ * Remove p2p message from session.
+ * @param unknown_type $bid
+ * @return unknown_type
+ */
+function _microstrategy_remove_message_from_session($bid) {
+  $name = MSTR_PREFIX . $bid;
+  unset($_SESSION[$name]);
+}
+
+function _microstrategy_get_drupal_locale() {
+
+  global $language;
+  switch ($language->language) {
+    case "de": //locale.inc#_locale_get_predefined_list
+      $locale = MSTR_PORTLET_LOCALE_GERMAN;
+      break;
+    case "es":
+      $locale = MSTR_PORTLET_LOCALE_SPANISH;
+      break;
+    case "en":
+      $locale = MSTR_PORTLET_LOCALE_ENGLISH;
+      break;
+    case "fr":
+      $locale = MSTR_PORTLET_LOCALE_FRENCH;
+      break;
+    case "it":
+      $locale = MSTR_PORTLET_LOCALE_ITALIAN;
+      break;
+    case "ja":
+      $locale = MSTR_PORTLET_LOCALE_JAPANESE;
+      break;
+    case "ko":
+      $locale = MSTR_PORTLET_LOCALE_KOREAN;
+      break;
+    case "pt-br":
+      $locale = MSTR_PORTLET_LOCALE_PORTUGUESE_BR;
+      break;
+    case "sv":
+      $locale = MSTR_PORTLET_LOCALE_SWEDISH;
+      break;
+    case "zh-hans":
+      $locale = MSTR_PORTLET_LOCALE_CHINESE_S;
+      break;
+    case "zh-hant":
+      $locale = MSTR_PORTLET_LOCALE_CHINESE_T;
+      break;
+    default:
+      $locale = MSTR_PORTLET_LOCALE_ENGLISH;
+      break;
+  }
+  return $locale;
+}
+
+function _microstrategy_resolve_locale($locale, $default_locale) {
+  if (isset($locale) && $locale != MSTR_PORTLET_LOCALE_DEFAULT) {
+    return $locale;
+  }
+  else {
+    return $default_locale;
+  }
+}
+
+function microstrategy_encode_url($url) {
+  return urlencode($url); //URF-8? htmlentities($url, ENT_QUOTES, "UTF-8");
+}
+
+function microstrategy_decode_url($url) {
+  return urldecode($url); //URF-8? html_entity_decode($url, ENT_QUOTES, 'UTF-8');
+}
+
+/**
+ * Helper function to check if the current user can view
+ * a given microstrategy page
+ *
+ * @param $page
+ *   The page.
+ */
+function _microstrategy_user_access_page($page) {
+  global $user;
+
+  // Admin is always allowed
+  if (user_access('administer site configuration') || user_access('administer microstrategy')) {
+    return TRUE;
+  }
+
+  // Check page object for role restrictions
+  $rids = array_keys($user->roles);
+  $result = db_query("SELECT rid FROM {microstrategy_pages_roles} WHERE pid = :pid", array(':pid' => $page->pid));
+  foreach ($result as $role) {
+    if (array_search($role->rid, $rids)) {
+      return TRUE;
+    }
+  }
+
+  return FALSE;
+}
+
+/**
+ * Return microstrategy credentials for the current user
+ * @param $sso_namespace Sing-sign-on namespace
+ * @return credentials (of type array)
+ */
+function _microstrategy_get_credentials($sso_namespace) {
+
+  module_load_include('inc', 'microstrategy', 'includes/microstrategy.crypto');
+  $crypto = new MicrostrategyCrypto();
+
+  global $user;
+
+  $credentials = Array();
+
+  $namespace = 'mstr_';
+  if (isset($sso_namespace)) {
+    $sso_namespace = trim($sso_namespace);
+    if (!empty($sso_namespace)) {
+        $namespace = 'mstr_' . $sso_namespace . '_';
+    }
+  }
+
+  $logon_name = $namespace . 'logon';
+  $user_data = $user->data['microstrategy'];
+  if (isset($user_data[$logon_name])) {
+    $credentials['logon'] = $crypto->decrypt($user_data[$logon_name]);
+  }
+
+  $password_name = $namespace . 'password';
+  if (isset($user_data[$password_name])) {
+    $credentials['password'] = $crypto->decrypt($user_data[$password_name]);
+  }
+
+  $display_locale_name = $namespace . 'display_locale';
+  if (isset($user_data[$display_locale_name])) {
+    $credentials['display_locale'] = (int) $user_data[$display_locale_name];
+  }
+
+  $data_locale_name = $namespace . 'data_locale';
+  if (isset($user_data[$data_locale_name])) {
+    $credentials['data_locale'] = (int) $user_data[$data_locale_name];
+  }
+
+  $metadata_locale_name = $namespace . 'metadata_locale';
+  if (isset($user_data[$metadata_locale_name])) {
+    $credentials['metadata_locale'] = (int) $user_data[$metadata_locale_name];
+  }
+
+  $warehouse_data_locale_name = $namespace . 'warehouse_data_locale';
+  if (isset($user_data[$warehouse_data_locale_name])) {
+    $credentials['warehouse_data_locale'] = (int) $user_data[$warehouse_data_locale_name];
+  }
+
+  return $credentials;
+}
+
+/**
+ * Call this function to get credentials if use to connect to MicroStrategy.
+ * @param $sso_namespace Sing-sign-on namespace
+ * @param $credential_mapper_file credential mapper file name
+ * @param $credential_mapper_function credential mapper function name
+ * @return credentials (of type array).
+ */
+function _microstrategy_get_mapped_credentials($sso_namespace, $credential_mapper_file, $credential_mapper_function) {
+
+  $credentials = _microstrategy_get_credentials($sso_namespace);
+
+  if (!empty($credential_mapper_file) && !empty($credential_mapper_function)) {
+
+    $file = './'. drupal_get_path('module', 'microstrategy') ."/custom_plugin/$credential_mapper_file";
+
+    if (is_file($file)) {
+      require_once $file;
+    }
+
+    if (function_exists($credential_mapper_function)) {
+      $credentials = $credential_mapper_function($credentials);
+    }
+
+  }
+
+  return $credentials;
+}
+
+/**
+ * Return microstrategy credentials
+ * @param $sso_namespace Sing-sign-on namespace
+ * @param $credentials (of type array) MicroStrategy credentials
+ * @return TRUE if save succeed or FALSE if failed.
+ */
+function _microstrategy_save_credentials($sso_namespace, $credentials) {
+
+  module_load_include('inc', 'microstrategy', 'includes/microstrategy.crypto');
+  $crypto = new MicrostrategyCrypto();
+
+  $namespace = 'mstr_';
+  if (isset($sso_namespace)) {
+    $sso_namespace = trim($sso_namespace);
+    if (!empty($sso_namespace)) {
+        $namespace = 'mstr_' . $sso_namespace . '_';
+    }
+  }
+
+  $cred_with_namespace = array();
+
+  if (isset($credentials['logon'])) {
+    $cred_with_namespace[$namespace . 'logon'] = $crypto->encrypt(trim($credentials['logon']));
+  }
+
+  if (isset($credentials['password'])) {
+    $cred_with_namespace[$namespace . 'password'] = $crypto->encrypt($credentials['password']);
+  }
+
+  if (isset($credentials['display_locale'])) {
+    $cred_with_namespace[$namespace . 'display_locale'] = $credentials['display_locale'];
+  }
+
+  if (isset($credentials['data_locale'])) {
+    $cred_with_namespace[$namespace . 'data_locale'] = $credentials['data_locale'];
+  }
+
+  if (isset($credentials['metadata_locale'])) {
+    $cred_with_namespace[$namespace . 'metadata_locale'] = $credentials['metadata_locale'];
+  }
+
+  if (isset($credentials['warehouse_data_locale'])) {
+    $cred_with_namespace[$namespace . 'warehouse_data_locale'] = $credentials['warehouse_data_locale'];
+  }
+
+  global $user;
+  if (user_save($user, array('microstrategy' => $cred_with_namespace)) == FALSE) {
+    return FALSE;
+  }
+
+  return TRUE;
+}
+
+/**
+ * Implements hook_user_presave().
+ * Stores properties in the serialized {users}.data column.
+ * @param edit The array of form values submitted by the user. Assign values to this array to save changes in the database.
+ * @param account The user object on which the operation is performed. Values assigned in this object will not be saved in the database.
+ * @param category The active category of user information being edited.
+ */
+function microstrategy_user_presave(&$edit, $account, $category) {
+  if (isset($edit['microstrategy'])) {
+    $edit['data']['microstrategy'] = $edit['microstrategy'];
+  }
+}
+

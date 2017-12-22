@@ -1,0 +1,703 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  microstrategy.admin.inc: n/a
+#  microstrategy.module: n/a
+#  microstrategy.pages.inc: n/a
+#  includes/microstrategy.session.inc: n/a
+#  microstrategy.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2011-08-22 06:54+0000\n"
+"PO-Revision-Date: 2011-08-22 06:54+0000\n"
+"Last-Translator: MicroStrategy Translation Team\n"
+"Language-Team: MicroStrategy Translation Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: microstrategy.admin.inc:14 microstrategy.module:289
+msgid "Pages"
+msgstr "Sidor"
+
+#: microstrategy.admin.inc:17
+msgid "List, edit, or add MicroStrategy pages. A MicroStrategy page is a Drupal page that displays MicroStrategy content (such as reports, documents, folders, and so on)."
+msgstr "Lista, redigera och lägg till MicroStrategy-sidor. En MicroStrategy-sida är en Drupal-sida som visar MicroStrategy-innehåll (rapporter, dokument, mappar osv). "
+
+#: microstrategy.admin.inc:20 microstrategy.module:309
+msgid "Blocks"
+msgstr "Block"
+
+#: microstrategy.admin.inc:23
+msgid "List, edit, or add MicroStrategy blocks. A MicroStrategy block is a Drupal block that displays MicroStrategy content (such as reports, documents, folders, and so on)."
+msgstr "Lista, redigera och lägg till MicroStrategy-block. Ett MicroStrategy-block är ett Drupal-block som visar MicroStrategy-innehåll (rapporter, dokument, mappar osv)."
+
+#: microstrategy.admin.inc:26 microstrategy.module:318
+msgid "Default Settings"
+msgstr "Standardinställningar"
+
+#: microstrategy.admin.inc:29
+msgid "Set the default settings for MicroStrategy pages or blocks. The changes are applied to any newly added and non-customized existing pages or blocks."
+msgstr "Ange standardinställningar för MicroStrategy-sidor och -block. Ändringarna tillämpas på alla nya sidor och block, och på befintliga som inte har anpassats."
+
+#: microstrategy.admin.inc:41;217
+msgid "Page Default Settings"
+msgstr "Standardinställningar för sidan"
+
+#: microstrategy.admin.inc:44 microstrategy.module:144
+msgid "Set the default settings for MicroStrategy pages. The changes are applied to any newly added pages, as well as non-customized existing pages."
+msgstr "Ange standardinställningar för MicroStrategy-sidor. Ändringarna tillämpas på alla nya sidor, och på befintliga sidor som inte har anpassats."
+
+#: microstrategy.admin.inc:47;420
+msgid "Basic block default settings"
+msgstr "Standardinställningar för grundblock"
+
+#: microstrategy.admin.inc:50 microstrategy.module:152
+msgid "Set the default settings for MicroStrategy basic blocks. The changes are applied to any newly added basic blocks, as well as non-customized existing basic blocks."
+msgstr "Ange standardinställningar för MicroStrategy-grundblock. Ändringarna tillämpas på alla nya grundblock, och på befintliga grundblock som inte har anpassats."
+
+#: microstrategy.admin.inc:53;423
+msgid "Master block default settings"
+msgstr "Standardinställningar för huvudblock"
+
+#: microstrategy.admin.inc:56 microstrategy.module:155
+msgid "Set the default settings for MicroStrategy master blocks. The changes are applied to any newly added master blocks, as well as non-customized existing master blocks."
+msgstr "Ange standardinställningar för MicroStrategy-huvudblock. Ändringarna tillämpas på alla nya huvudblock, och på befintliga huvudblock som inte har anpassats."
+
+#: microstrategy.admin.inc:76;367 microstrategy.pages.inc:211;240;253;266;314;327;340;369
+msgid "Name"
+msgstr "Namn"
+
+#: microstrategy.admin.inc:76;367
+msgid "Operations"
+msgstr "Operationer"
+
+#: microstrategy.admin.inc:81
+msgid "edit"
+msgstr "Redigera"
+
+#: microstrategy.admin.inc:82;377
+msgid "settings"
+msgstr "inställningar"
+
+#: microstrategy.admin.inc:83;378
+msgid "delete"
+msgstr "Ta bort"
+
+#: microstrategy.admin.inc:102
+msgid "Page Title"
+msgstr "Sidans titel"
+
+#: microstrategy.admin.inc:107
+msgid "The title for this page."
+msgstr "Den här sidans titel."
+
+#: microstrategy.admin.inc:112
+msgid "Path"
+msgstr "Sökväg"
+
+#: microstrategy.admin.inc:117
+msgid "Specify a URL by which this page can be accessed. Use a relative path and do not use trailing slashes."
+msgstr "Ange en URL sidan kan nås med. Använd en relativ sökväg och börja eller sluta inte med snedstreck. "
+
+#: microstrategy.admin.inc:121
+msgid "Create a menu entry"
+msgstr "Skapa ett menyobjekt"
+
+#: microstrategy.admin.inc:122
+msgid "If selected, a menu entry will be created for this page."
+msgstr "Om detta alternativ väljs skapas ett menyobjekt för den här sidan."
+
+#: microstrategy.admin.inc:139
+msgid "Show page for specific roles"
+msgstr "Visa sidan för vissa roller"
+
+#: microstrategy.admin.inc:142
+msgid "Show this page only for the selected role(s)."
+msgstr "Visa denna sida bara för valda roller."
+
+#: microstrategy.admin.inc:153;170;190
+msgid "Save page"
+msgstr "Spara sida"
+
+#: microstrategy.admin.inc:161;170;176 microstrategy.module:301
+msgid "Add page"
+msgstr "Lägg till sida"
+
+#: microstrategy.admin.inc:187;188
+msgid "Page %title has been added."
+msgstr "Sidan %title har lagts till."
+
+#: microstrategy.admin.inc:201;202
+msgid "Changes have been saved for page %title."
+msgstr "Ändringar på sidan %title har sparats."
+
+#: microstrategy.admin.inc:220;426
+msgid "%title settings"
+msgstr "Inställningar för %title"
+
+#: microstrategy.admin.inc:234;456 microstrategy.pages.inc:41;89;627
+msgid "Submit"
+msgstr "Skicka"
+
+#: microstrategy.admin.inc:276;277
+msgid "Page default settings have been saved."
+msgstr "Sidans standardinställningar har sparats."
+
+#: microstrategy.admin.inc:281;505;282;506
+msgid "%title settings have been saved."
+msgstr "Inställningar för %title har sparats."
+
+#: microstrategy.admin.inc:313
+msgid "Are you sure you want to delete the page %title?"
+msgstr "Är du säker på att du vill ta bort sidan %title?"
+
+#: microstrategy.admin.inc:329;330
+msgid "Page %title has been deleted."
+msgstr "Sidan %title har tagits bort."
+
+#: microstrategy.admin.inc:349;372
+msgid "Basic"
+msgstr "Grundläggande"
+
+#: microstrategy.admin.inc:349;374
+msgid "Master"
+msgstr "Huvud"
+
+#: microstrategy.admin.inc:353
+msgid "Add block"
+msgstr "Lägg till block"
+
+#: microstrategy.admin.inc:367
+msgid "Type"
+msgstr "Typ"
+
+#: microstrategy.admin.inc:376
+msgid "configure"
+msgstr "konfigurera"
+
+#: microstrategy.admin.inc:395
+msgid "You must specify a valid block name."
+msgstr "Du måste ange ett giltigt namn för blocket."
+
+#: microstrategy.admin.inc:409;410
+msgid "Block %title has been added."
+msgstr "Blocket %title har lagts till."
+
+#: microstrategy.admin.inc:496;497
+msgid "Basic block default settings have been saved."
+msgstr "Standardinställningar för grundblock har sparats."
+
+#: microstrategy.admin.inc:500;501
+msgid "Master block default settings have been saved."
+msgstr "Standardinställningar för huvudblock har sparats."
+
+#: microstrategy.admin.inc:518
+msgid "Are you sure you want to delete the block %title?"
+msgstr "Är du säker på att du vill ta bort blocket %title?"
+
+#: microstrategy.admin.inc:534;535
+msgid "Block %title has been deleted."
+msgstr "Blocket %title har tagits bort."
+
+#: microstrategy.admin.inc:542;608
+msgid "MicroStrategy Content URL"
+msgstr "URL för MicroStrategy-innehåll"
+
+#: microstrategy.admin.inc:547;613
+msgid "MicroStrategy Web Base URL"
+msgstr "URL för MicroStrategy Web-bas"
+
+#: microstrategy.admin.inc:554;620
+msgid "MicroStrategy Web Task URL"
+msgstr "URL för MicroStrategy Web-uppgift"
+
+#: microstrategy.admin.inc:561;651
+msgid "MicroStrategy Report URL"
+msgstr "URL för MicroStrategy-rapport"
+
+#: microstrategy.admin.inc:567;633
+msgid "MicroStrategy Folder URL"
+msgstr "URL för MicroStrategy-mapp"
+
+#: microstrategy.admin.inc:573;639
+msgid "MicroStrategy History List URL"
+msgstr "URL för MicroStrategy-historiklista"
+
+#: microstrategy.admin.inc:579;645
+msgid "MicroStrategy Search Page URL"
+msgstr "URL för MicroStrategy-söksida"
+
+#: microstrategy.admin.inc:585
+msgid "MicroStrategy Project Page URL"
+msgstr "URL för MicroStrategy-projektsida"
+
+#: microstrategy.admin.inc:591
+msgid "MicroStrategy HTML Document URL"
+msgstr "URL för MicroStrategy-HTML-dokument"
+
+#: microstrategy.admin.inc:597;657
+msgid "MicroStrategy Document URL"
+msgstr "URL för MicroStrategy-dokument"
+
+#: microstrategy.admin.inc:627
+msgid "MicroStrategy Prompt URL"
+msgstr "URL för MicroStrategy-prompt"
+
+#: microstrategy.admin.inc:668
+msgid "MicroStrategy Server"
+msgstr "MicroStrategy Server"
+
+#: microstrategy.admin.inc:673
+msgid "MicroStrategy Intelligence Server"
+msgstr "MicroStrategy Intelligence Server"
+
+#: microstrategy.admin.inc:680
+msgid "MicroStrategy Intelligence Server Port"
+msgstr "Port för MicroStrategy Intelligence Server"
+
+#: microstrategy.admin.inc:687
+msgid "MicroStrategy Single Sign-on Namespace"
+msgstr "SSO-namnutrymme för MicroStrategy"
+
+#: microstrategy.admin.inc:690 microstrategy.pages.inc:116
+msgid "All MicroStrategy pages and blocks with the same Single Sign-on Namespace share the same MicroStrategy Credentials for this user."
+msgstr "Alla MicroStrategy-sidor och -block med samma SSO-namnutrymme delar samma MicroStrategy-inloggningsuppgifter för den här användaren."
+
+#: microstrategy.admin.inc:694
+msgid "MicroStrategy Authentication Mode"
+msgstr "MicroStrategy verifieringsläge"
+
+#: microstrategy.admin.inc:697
+msgid "Standard"
+msgstr "Standard"
+
+#: microstrategy.admin.inc:698
+msgid "NT"
+msgstr "NT"
+
+#: microstrategy.admin.inc:699
+msgid "Guest"
+msgstr "Gäst"
+
+#: microstrategy.admin.inc:700
+msgid "LDAP"
+msgstr "LDAP"
+
+#: microstrategy.admin.inc:701
+msgid "Database"
+msgstr "Databas"
+
+#: microstrategy.admin.inc:702
+msgid "Trusted"
+msgstr "Betrodd"
+
+#: microstrategy.admin.inc:703
+msgid "Integrated"
+msgstr "Integrerad"
+
+#: microstrategy.admin.inc:708
+msgid "Let User Select Locales for MicroStrategy Web"
+msgstr "Låt användaren välja språk för MicroStrategy Web"
+
+#: microstrategy.admin.inc:713
+msgid "MicroStrategy Project Name"
+msgstr "Namn på MicroStrategy-projekt"
+
+#: microstrategy.admin.inc:720
+msgid "Regular Working Set Size"
+msgstr "Normal storlek på bearbetningsset"
+
+#: microstrategy.admin.inc:726
+msgid "Cancel pending requests upon logout"
+msgstr "Avbryt pågående begäran vid utloggning"
+
+#: microstrategy.admin.inc:731
+msgid "Remove jobs in History List upon logout"
+msgstr "Ta bort jobb i historiklistan vid utloggning"
+
+#: microstrategy.admin.inc:733 microstrategy.pages.inc:569
+msgid "No"
+msgstr "Nej"
+
+#: microstrategy.admin.inc:733 microstrategy.pages.inc:569
+msgid "Yes"
+msgstr "Ja"
+
+#: microstrategy.admin.inc:733
+msgid "ReadOnly"
+msgstr "Skrivskyddat"
+
+#: microstrategy.admin.inc:742
+msgid "Plug-ins"
+msgstr "Tilläggsprogram"
+
+#: microstrategy.admin.inc:748
+msgid "Credential Mapper File Name"
+msgstr "Filnamn för mappning av inloggningsfiler"
+
+#: microstrategy.admin.inc:754
+msgid "Credential Mapper Function Name"
+msgstr "Funktionsnamn för mappning av inloggningsfiler"
+
+#: microstrategy.admin.inc:760
+msgid "URL Parameter Mapper File Name"
+msgstr "Filnamn för mappning av URL-parametrar"
+
+#: microstrategy.admin.inc:766
+msgid "URL Parameter Mapper Function Name"
+msgstr "Funktionsnamn för mappning av URL-parametrar"
+
+#: microstrategy.admin.inc:776 microstrategy.pages.inc:584
+msgid "User Parameters"
+msgstr "Användarparametrar"
+
+#: microstrategy.admin.inc:782
+msgid "Shared User Parameter"
+msgstr "Delade användarparametrar"
+
+#: microstrategy.admin.inc:785
+msgid "Format of \"name1:value1;name2:value2;\""
+msgstr "Formatet \"name1:value1;name2:value2;\""
+
+#: microstrategy.admin.inc:789
+msgid "Personal User Parameter Template"
+msgstr "Mall för personliga användarparametrar"
+
+#: microstrategy.admin.inc:792
+msgid "Format of \"name1:display name1:default value;name2: display name2:default value2;\""
+msgstr "Formatet \"name1:display name1:default value;name2: display name2:default value2;\""
+
+#: microstrategy.admin.inc:801;814
+msgid "Default Preferences"
+msgstr "Standardinställningar"
+
+#: microstrategy.admin.inc:915
+msgid "Path must be lowercase alphanumeric, underscores, dashes, or forward-slashes only."
+msgstr "Sökvägen kan bara innehålla små alfanumeriska tecken, streck och framåtvända snedstreck."
+
+#: microstrategy.admin.inc:922
+msgid "Path cannot begin or end with a slash."
+msgstr "Sökvägen kan inte börja eller sluta med snedstreck."
+
+#: microstrategy.admin.inc:934
+msgid "The chosen path is already in use."
+msgstr "Den valda sökvägen används redan."
+
+#: microstrategy.admin.inc:188;202;277;282;330;410;497;501;506;535 microstrategy.pages.inc:620;632 includes/microstrategy.session.inc:110;120;127;264;274;282
+msgid "microstrategy"
+msgstr "microstrategy"
+
+#: microstrategy.pages.inc:13;51
+msgid "%title preferences"
+msgstr "Inställningar för %title"
+
+#: microstrategy.pages.inc:95;635
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: microstrategy.pages.inc:114
+msgid "Enter credential information to connect to MicroStrategy:"
+msgstr "Mata in inloggningsinformation för att ansluta till MicroStrategy:"
+
+#: microstrategy.pages.inc:124
+msgid "Logon"
+msgstr "Logga på"
+
+#: microstrategy.pages.inc:131
+msgid "Password"
+msgstr "Lösenord"
+
+#: microstrategy.pages.inc:139
+msgid "Default"
+msgstr "Standard"
+
+#: microstrategy.pages.inc:140
+msgid "German"
+msgstr "Tyska"
+
+#: microstrategy.pages.inc:141
+msgid "Spanish"
+msgstr "Spanska"
+
+#: microstrategy.pages.inc:142
+msgid "English"
+msgstr "Engelska"
+
+#: microstrategy.pages.inc:143
+msgid "English (UK)"
+msgstr "Engelska (UK)"
+
+#: microstrategy.pages.inc:144
+msgid "French"
+msgstr "Franska"
+
+#: microstrategy.pages.inc:145
+msgid "Italian"
+msgstr "Italienska"
+
+#: microstrategy.pages.inc:146
+msgid "Japanese"
+msgstr "Japanska"
+
+#: microstrategy.pages.inc:147
+msgid "Korean"
+msgstr "Koreanska"
+
+#: microstrategy.pages.inc:148
+msgid "Portuguese (Brazil)"
+msgstr "Portugisiska (Brasilien)"
+
+#: microstrategy.pages.inc:149
+msgid "Swedish"
+msgstr "Svenska"
+
+#: microstrategy.pages.inc:150
+msgid "Chinese (Simplified)"
+msgstr "Kinesiska (förenklad)"
+
+#: microstrategy.pages.inc:151
+msgid "Chinese (Traditional)"
+msgstr "Kinesiska (traditionell)"
+
+#: microstrategy.pages.inc:155
+msgid "Language"
+msgstr "Språk"
+
+#: microstrategy.pages.inc:161
+msgid "Number and Date Format"
+msgstr "Nummer- och datumformat"
+
+#: microstrategy.pages.inc:167
+msgid "Metadata"
+msgstr "Metadata"
+
+#: microstrategy.pages.inc:173
+msgid "Data"
+msgstr "Data"
+
+#: microstrategy.pages.inc:185;288
+msgid "Select MicroStrategy business intelligence content to display:"
+msgstr "Välj vilken MicroStrategy företagsinformation som ska visas:"
+
+#: microstrategy.pages.inc:197;304
+msgid "Display MicroStrategy Report"
+msgstr "Visa MicroStrategy rapport"
+
+#: microstrategy.pages.inc:198;301
+msgid "Display MicroStrategy Folder"
+msgstr "Visa MicroStrategy mapp"
+
+#: microstrategy.pages.inc:199;302
+msgid "Display MicroStrategy History List"
+msgstr "Visa MicroStrategy historiklista"
+
+#: microstrategy.pages.inc:200;303
+msgid "Display MicroStrategy Search Page"
+msgstr "Visa MicroStrategys söksida"
+
+#: microstrategy.pages.inc:201
+msgid "Display MicroStrategy Project Page"
+msgstr "Visa MicroStrategys projektsida"
+
+#: microstrategy.pages.inc:202
+msgid "Display MicroStrategy HTML Document"
+msgstr "Visa MicroStrategy HTML-dokument"
+
+#: microstrategy.pages.inc:203;305
+msgid "Display MicroStrategy Document"
+msgstr "Visa MicroStrategy-dokument"
+
+#: microstrategy.pages.inc:210;239;252;265;313;326;339;368
+msgid "ID"
+msgstr "ID"
+
+#: microstrategy.pages.inc:222;351
+msgid "Grid"
+msgstr "Tabell"
+
+#: microstrategy.pages.inc:223;352
+msgid "Graph"
+msgstr "Diagram"
+
+#: microstrategy.pages.inc:224;353
+msgid "Grid and Graph"
+msgstr "Tabell och diagram"
+
+#: microstrategy.pages.inc:230;277;359;380
+msgid "None"
+msgstr "Inga"
+
+#: microstrategy.pages.inc:231;278;360;381
+msgid "Flash Visualization"
+msgstr "Flash-visualisering"
+
+#: microstrategy.pages.inc:232;279;361;382
+msgid "AJAX Visualization"
+msgstr "AJAX-visualisering"
+
+#: microstrategy.pages.inc:300
+msgid "Display MicroStrategy Prompts (using a prompted report)"
+msgstr "Visa MicroStrategy-prompter (genom att använda en rapport med frågor - prompter)"
+
+#: microstrategy.pages.inc:438;498
+msgid "Load last session settings"
+msgstr "Ladda inställningar för senaste session"
+
+#: microstrategy.pages.inc:513
+msgid "Set master block properties"
+msgstr "Ange egenskaper för huvudblocket"
+
+#: microstrategy.pages.inc:518
+msgid "Display Send-to Menu"
+msgstr "Visa Skicka till-menyn"
+
+#: microstrategy.pages.inc:528
+msgid "Default Target Block"
+msgstr "Standardmålblock"
+
+#: microstrategy.pages.inc:540
+msgid "Enable All For Send as Filter"
+msgstr "Enable All For Send as Filter"
+
+#: microstrategy.pages.inc:550
+msgid "Choose display properties:"
+msgstr "Välj visningsegenskaper:"
+
+#: microstrategy.pages.inc:555
+msgid "Height"
+msgstr "Höjd"
+
+#: microstrategy.pages.inc:561
+msgid "Width"
+msgstr "Bredd"
+
+#: microstrategy.pages.inc:567
+msgid "Scrolling"
+msgstr "Rulla"
+
+#: microstrategy.pages.inc:569
+msgid "Auto"
+msgstr "Automatisk"
+
+#: microstrategy.pages.inc:762;768
+msgid "Report Name or ID cannot be empty!"
+msgstr "Rapportnamnet eller rapport-id:t måste fyllas i!"
+
+#: microstrategy.pages.inc:774
+msgid "Folder Name or ID cannot be empty!"
+msgstr "Mappnamnet eller mapp-id:t måste fyllas i!"
+
+#: microstrategy.pages.inc:780
+msgid "HTML Document Name or ID cannot be empty!"
+msgstr "HTML-dokumentnamnet eller HTML-dokument-id:t måste fyllas i!"
+
+#: microstrategy.pages.inc:786
+msgid "Document Name or ID cannot be empty!"
+msgstr "Dokumentnamnet eller dokument-id:t måste fyllas i!"
+
+#: microstrategy.pages.inc:620;632
+msgid "%title preferences have been saved."
+msgstr "Inställningar för %title har sparats."
+
+#: microstrategy.module:131 microstrategy.info:0
+msgid "Integrate MicroStrategy into Drupal"
+msgstr "Integrera MicroStrategy med Drupal"
+
+#: microstrategy.module:134;283
+msgid "List, edit, or add MicroStrategy pages and blocks."
+msgstr "Lista, redigera och lägg till MicroStrategy-sidor och -block."
+
+#: microstrategy.module:137
+msgid "Microstrategy pages are listed below. Each page is accessible from one URL on your site. You can create as many pages as you need and determine the content to display (such as reports, documents, folders, and so on)."
+msgstr "MicroStrategy-sidor anges nedan. Varje sida kan nås med en URL på din webbplats. Du kan skapa så många sidor du behöver och bestämma vilket innehåll som ska visas (rapporter, dokument, mappar, osv)."
+
+#: microstrategy.module:140
+msgid "Microstrategy blocks are listed below. Each block is a Drupal block which displays some MicroStrategy content (for example, reports, documents, folders, and so on). You can create as many blocks as you need and determine what content to display. A good practice is to install the <a href='http://drupal.org/project/homebox'>HomeBox</a> module and then add blocks in a Homebox page, to display multiple MicroStrategy content in one page."
+msgstr "MicroStrategy-block anges nedan. Alla block är Drupal-block som visar MicroStrategy-innehåll (rapporter, dokument, mappar osv). Du kan skapa så många block du behöver och bestämma vilket innehåll som ska visas. Om du vill visa flera typer av MicroStrategy-innehåll på samma sida är det bra att först installera modulen <a href='http://drupal.org/project/homebox'>HomeBox</a>, och sedan lägga till block på en Homebox-sida. "
+
+#: microstrategy.module:147
+msgid "Set the settings for the MicroStrategy page. The changes will overwrite default settings."
+msgstr "Ange inställningar för MicroStrategy-sidan. Ändringarna skriver över standardinställningar."
+
+#: microstrategy.module:158
+msgid "Set the settings for the MicroStrategy block. The changes will overwrite default settings."
+msgstr "Ange inställningar för MicroStrategy-blocket. Ändringarna skriver över standardinställningar."
+
+#: microstrategy.module:405
+msgid "Target Portlet {0} cannot be found!"
+msgstr "Målportlet {0} hittades inte!"
+
+#: microstrategy.module:406
+msgid "Target Portlet {0}  points to different MicroStrategy Project"
+msgstr "Målportlet {0} pekar på ett annat MicroStrategy-projekt"
+
+#: microstrategy.module:407
+msgid "Cannot display content because Portlet {0} is in edit mode."
+msgstr "Kan inte visa innehåll eftersom portlet {0} är i redigeringsläge."
+
+#: microstrategy.module:441
+msgid "New Window"
+msgstr "Nytt Fönster"
+
+#: microstrategy.module:463;267
+msgid "Preferences"
+msgstr "Inställningar"
+
+#: microstrategy.module:171
+msgid "administer microstrategy"
+msgstr "Administrera MicroStrategy"
+
+#: microstrategy.module:171
+msgid "access preferences"
+msgstr "Åtkomst till inställningar"
+
+#: microstrategy.module:262
+msgid "View"
+msgstr "Visa"
+
+#: microstrategy.module:282 microstrategy.info:0;0
+msgid "MicroStrategy"
+msgstr "MicroStrategy"
+
+#: microstrategy.module:296
+msgid "List"
+msgstr "Lista"
+
+#: microstrategy.module:327
+msgid "Edit page"
+msgstr "Redigera sida"
+
+#: microstrategy.module:336
+msgid "Page Settings"
+msgstr "Inställningar för sida"
+
+#: microstrategy.module:345
+msgid "Page"
+msgstr "Sida"
+
+#: microstrategy.module:355
+msgid "Block Settings"
+msgstr "Inställningar för block"
+
+#: microstrategy.module:364
+msgid "Block"
+msgstr "Block"
+
+#: includes/microstrategy.session.inc:111;128;110;120;127;274
+msgid "Creating a session caused an error: %error"
+msgstr "Ett fel uppstod när en session skapades: %error"
+
+#: includes/microstrategy.session.inc:118;272
+msgid "The response from %task task caused the following error: %error on line %line."
+msgstr "Svaret från aktiviteten %task orsakade det här felet: %error på rad %line."
+
+#: includes/microstrategy.session.inc:264;282
+msgid "Closing a session for %title caused an error: %error"
+msgstr "Ett fel uppstod när en session för %title stängdes: %error"
+

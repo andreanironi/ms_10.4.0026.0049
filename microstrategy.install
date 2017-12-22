@@ -1,0 +1,433 @@
+<?php
+
+function microstrategy_schema() {
+
+  // Schema for MicroStrategy pages
+  $schema['microstrategy_pages'] = array(
+    'fields' => array(
+      'pid'  => array('type' => 'serial', 'not null' => TRUE),
+      'title' => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => ''),
+      'path' => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => ''),
+      'menu' => array('type' => 'int', 'not null' => TRUE, 'default' => 0), //0:NO, 1:YES
+    ),
+    'primary key' => array('pid'),
+  );
+
+  $schema['microstrategy_pages_roles'] = array(
+    'fields' => array(
+      'pid'  => array('type' => 'serial', 'not null' => TRUE),
+      'rid' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'description' => "The user's role ID from {role}.rid."),
+    ),
+    'primary key' => array('pid', 'rid'),
+  );
+
+  // Schema for MicroStrategy blocks
+  $schema['microstrategy_blocks'] = array(
+    'fields' => array(
+      'bid'  => array('type' => 'serial', 'not null' => TRUE), //used as the 'delta' value in 'blocks' table.
+      'type' => array('type' => 'int', 'not null' => TRUE, 'default' => 0), //0:basic, 1:master
+      'title' => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => '', 'description' => 'microstrategy block default title.'),
+    ),
+    'primary key' => array('bid'),
+  );
+
+  // Schema for microstrategy page/block administrator settings
+  $settings_fields = _microstrategy_schema_settings_fields();
+  $preferences_fields = _microstrategy_schema_preferences_fields();
+  $settings_key_fields = array(
+    'pid' => array('type' => 'int', 'not null' => TRUE, 'default' => 0, 'description' => 'microstrategy page id.'),
+    'bid' => array('type' => 'int', 'not null' => TRUE, 'default' => 0, 'description' => 'microstrategy block id.'),
+  );
+  $schema['microstrategy_settings'] = array(
+    'fields' => array_merge($settings_key_fields, $settings_fields, $preferences_fields),
+    'primary key' => array('bid', 'pid'),
+  );
+
+  // Schema for microstrategy page/block user preferences
+  $preferences_key_fields = array(
+    'uid' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0, 'description' => 'user id.'),
+    'pid' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0, 'description' => 'microstrategy page id.'),
+    'bid' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0, 'description' => 'microstrategy block id.'),
+  );
+  $schema['microstrategy_preferences'] = array(
+    'fields' => array_merge($preferences_key_fields, $preferences_fields),
+    'primary key' => array('uid', 'bid', 'pid'),
+  );
+
+  return $schema;
+}
+
+function _microstrategy_schema_settings_fields() {
+  return array(
+    // MicroStrategy Content URL
+    'base_url' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy Web Base URL.',
+    ),
+    'task_url' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy Web Task URL.',
+    ),
+    'report_url' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy Report URL.',
+    ),
+    'prompt_url' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy Prompt URL.',
+    ),
+    'folder_url' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy Folder URL.',
+    ),
+    'history_url' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy History List URL.',
+    ),
+    'search_url' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy Search Page URL.',
+    ),
+    'project_url' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy Project Page URL.',
+    ),
+    'htmldoc_url' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy HTML Document URL.',
+    ),
+    'doc_url' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy Document URL.',
+    ),
+    // MicroStrategy Server
+    'iserver' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy Intelligence Server.',
+    ),
+    'port' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '0',
+        'description' => 'MicroStrategy Intelligence Server Port.',
+    ),
+    'project' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy Project Name.',
+    ),
+    'authmode' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'MicroStrategy Authentication Mode.',
+    ),
+    'sso_namespace' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy Single-sign-on namespace.',
+    ),
+    'show_locale' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 1,
+        'description' => 'Let User Select Locales for MicroStrategy Web',
+    ),
+    'working_set_size' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 1,
+        'description' => 'Regular Working Set Size',
+    ),
+    'cancel_pending_request' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Cancel pending requests upon logout',
+    ),
+    'remove_history_jobs' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 2,
+        'description' => 'Remove jobs in History List upon logout',
+    ),
+    //Plug-ins
+    'credential_mapper_file' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy credential mapper file name.',
+    ),
+    'credential_mapper_function' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '0',
+        'description' => 'MicroStrategy credential mapper function name.',
+    ),
+    'parameter_mapper_file' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy parameter mapper file name.',
+    ),
+    'parameter_mapper_function' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '0',
+        'description' => 'MicroStrategy parameter mapper function name.',
+    ),
+    // User Parameters
+    'shared_parameter' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Shared user parameter.',
+    ),
+    'personal_parameter_template' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Personal user parameter template.',
+    ),
+  );
+}
+
+function _microstrategy_schema_preferences_fields() {
+  return array(
+    //Select MicroStrategy business intelligence content to display
+    'type' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'MicroStrategy Content Type.',
+    ),
+    'report_name_type' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'MicroStrategy Report Name Type.',
+    ),
+    'report_name' => array(
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy Report Name.',
+    ),
+    'prompt_name_type' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'MicroStrategy Prompted Report Name Type.',
+    ),
+    'prompt_name' => array(
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy Prompted Report Name.',
+    ),
+    'folder_name_type' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'MicroStrategy Folder Name Type.',
+    ),
+    'folder_name' => array(
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy Folder Name.',
+    ),
+    'htmldoc_name_type' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'MicroStrategy HTML Document Name Type.',
+    ),
+    'htmldoc_name' => array(
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy HTML Document Name.',
+    ),
+    'doc_name_type' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'MicroStrategy Document Name Type.',
+    ),
+    'doc_name' => array(
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'MicroStrategy Document Name.',
+    ),
+    'report_view_mode' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'MicroStrategy Report View Mode.',
+    ),
+    'report_visualization' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'MicroStrategy Report Visualization.',
+    ),
+    'document_view_mode' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'MicroStrategy Document View Mode.',
+    ),
+    //Choose display properties
+    'height' => array(
+        'type' => 'varchar',
+        'length' => 8,
+        'not null' => TRUE,
+        'default' => '300',
+        'description' => 'Height.',
+    ),
+    'width' => array(
+        'type' => 'varchar',
+        'length' => 8,
+        'not null' => TRUE,
+        'default' => '100%',
+        'description' => 'Width.',
+    ),
+    'scrolling' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Scrolling.',
+    ),
+    //Set master portlet properties
+    'show_sendto' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 1,
+        'description' => 'Show sendto menu.',
+    ),
+    'default_target' => array(
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Default target.',
+    ),
+    'enable_all_for_send_as_filter' => array(
+    	'type' => 'int',
+     	'size' => 'tiny',
+     	'not null' => TRUE,
+     	'default' => 1,
+     	'description' => 'Enable All for Send as Filter.',
+  	),
+    // customized parameters like data of users table
+    'personal_user_parameters' => array(
+        'type' => 'text',
+        'not null' => FALSE,
+        'size' => 'big',
+        'description' => 'Personal user parameters.',
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function microstrategy_uninstall() {
+  // Load the dependent module, in case it has been disabled.
+  drupal_load('module', 'microstrategy');
+
+  // Remove blocks for microstrategy
+  $blocks = microstrategy_get_blocks();
+  if (is_array($blocks) && !empty($blocks)) {
+    foreach ($blocks as $block) {
+      db_delete('block')
+        ->condition('module', 'microstrategy')
+        ->condition('delta',  $block->bid)
+        ->execute();
+    }
+  }
+}
+
+/**
+ * Add field Enable All for Send as Filter.
+ */
+function microstrategy_update_922() {
+  $ret = array();
+
+  $enable_all_for_send_as_filter = array(
+     'type' => 'int',
+     'size' => 'tiny',
+     'not null' => TRUE,
+     'default' => 1,
+     'description' => 'Enable All for Send as Filter.',
+  );
+
+  db_add_field($ret, 'microstrategy_preferences', 'enable_all_for_send_as_filter', $enable_all_for_send_as_filter);
+  db_add_field($ret, 'microstrategy_settings', 'enable_all_for_send_as_filter', $enable_all_for_send_as_filter);
+
+  return $ret;
+}

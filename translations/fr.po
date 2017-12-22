@@ -1,0 +1,703 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  microstrategy.admin.inc: n/a
+#  microstrategy.module: n/a
+#  microstrategy.pages.inc: n/a
+#  includes/microstrategy.session.inc: n/a
+#  microstrategy.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2011-08-22 06:54+0000\n"
+"PO-Revision-Date: 2011-08-22 06:54+0000\n"
+"Last-Translator: MicroStrategy Translation Team\n"
+"Language-Team: MicroStrategy Translation Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: microstrategy.admin.inc:14 microstrategy.module:289
+msgid "Pages"
+msgstr "Pages"
+
+#: microstrategy.admin.inc:17
+msgid "List, edit, or add MicroStrategy pages. A MicroStrategy page is a Drupal page that displays MicroStrategy content (such as reports, documents, folders, and so on)."
+msgstr "Répertorier, modifier ou ajouter des pages MicroStrategy. Une page MicroStrategy est une page Drupal qui affiche un contenu MicroStrategy (tel que des rapports, des documents, dossiers, etc.)."
+
+#: microstrategy.admin.inc:20 microstrategy.module:309
+msgid "Blocks"
+msgstr "Blocs"
+
+#: microstrategy.admin.inc:23
+msgid "List, edit, or add MicroStrategy blocks. A MicroStrategy block is a Drupal block that displays MicroStrategy content (such as reports, documents, folders, and so on)."
+msgstr "Répertorier, modifier ou ajouter des blocs MicroStrategy. Un bloc MicroStrategy est un bloc Drupal qui affiche un contenu MicroStrategy (tel que des rapports, des documents, dossiers, etc.)."
+
+#: microstrategy.admin.inc:26 microstrategy.module:318
+msgid "Default Settings"
+msgstr "Paramètres par défaut"
+
+#: microstrategy.admin.inc:29
+msgid "Set the default settings for MicroStrategy pages or blocks. The changes are applied to any newly added and non-customized existing pages or blocks."
+msgstr "Définissez les paramètres par défaut pour les blocs ou les pages de MicroStrategy. Les modifications sont appliquées à toutes les pages ou blocs existants non personnalisés et récemment ajoutés."
+
+#: microstrategy.admin.inc:41;217
+msgid "Page Default Settings"
+msgstr "Paramètres par défaut de la page"
+
+#: microstrategy.admin.inc:44 microstrategy.module:144
+msgid "Set the default settings for MicroStrategy pages. The changes are applied to any newly added pages, as well as non-customized existing pages."
+msgstr "Définissez les paramètres par défaut pour les pages MicroStrategy. Les modifications sont appliquées à toutes les pages récemment ajoutées ainsi que sur toutes les pages existantes non personnalisées."
+
+#: microstrategy.admin.inc:47;420
+msgid "Basic block default settings"
+msgstr "Paramètres par défaut du bloc de base"
+
+#: microstrategy.admin.inc:50 microstrategy.module:152
+msgid "Set the default settings for MicroStrategy basic blocks. The changes are applied to any newly added basic blocks, as well as non-customized existing basic blocks."
+msgstr "Définissez les paramètres par défaut pour les blocs de base MicroStrategy. Les modifications sont appliquées à tous les blocs de base récemment ajoutés ainsi que sur tous les bloc de base existants non personnalisés."
+
+#: microstrategy.admin.inc:53;423
+msgid "Master block default settings"
+msgstr "Paramètres par défaut du bloc principal"
+
+#: microstrategy.admin.inc:56 microstrategy.module:155
+msgid "Set the default settings for MicroStrategy master blocks. The changes are applied to any newly added master blocks, as well as non-customized existing master blocks."
+msgstr "Définissez les paramètres par défaut pour les blocs principaux de MicroStrategy. Les modifications sont appliquées à tous les blocs principaux récemment ajoutés ainsi que sur tous les bloc principaux existants non personnalisés."
+
+#: microstrategy.admin.inc:76;367 microstrategy.pages.inc:211;240;253;266;314;327;340;369
+msgid "Name"
+msgstr "Nom"
+
+#: microstrategy.admin.inc:76;367
+msgid "Operations"
+msgstr "Division des opérations"
+
+#: microstrategy.admin.inc:81
+msgid "edit"
+msgstr "Éditer"
+
+#: microstrategy.admin.inc:82;377
+msgid "settings"
+msgstr "paramètres"
+
+#: microstrategy.admin.inc:83;378
+msgid "delete"
+msgstr "Supprimer"
+
+#: microstrategy.admin.inc:102
+msgid "Page Title"
+msgstr "Titre de page"
+
+#: microstrategy.admin.inc:107
+msgid "The title for this page."
+msgstr "Le titre pour cette page."
+
+#: microstrategy.admin.inc:112
+msgid "Path"
+msgstr "Chemin d'accès"
+
+#: microstrategy.admin.inc:117
+msgid "Specify a URL by which this page can be accessed. Use a relative path and do not use trailing slashes."
+msgstr "Indiquez une URL via laquelle cette page peut être accédée. Utilisez un chemin d'accès relatif et n'utilisez pas de barres obliques finales."
+
+#: microstrategy.admin.inc:121
+msgid "Create a menu entry"
+msgstr "Création d'une entrée de menu"
+
+#: microstrategy.admin.inc:122
+msgid "If selected, a menu entry will be created for this page."
+msgstr "Si elle est sélectionnée, une entrée de menu sera créée pour cette page."
+
+#: microstrategy.admin.inc:139
+msgid "Show page for specific roles"
+msgstr "Affichage de page pour des rôles spécifiques"
+
+#: microstrategy.admin.inc:142
+msgid "Show this page only for the selected role(s)."
+msgstr "Affichez cette page uniquement pour le ou les rôles sélectionnés."
+
+#: microstrategy.admin.inc:153;170;190
+msgid "Save page"
+msgstr "Enregistrer la page"
+
+#: microstrategy.admin.inc:161;170;176 microstrategy.module:301
+msgid "Add page"
+msgstr "Ajouter une page"
+
+#: microstrategy.admin.inc:187;188
+msgid "Page %title has been added."
+msgstr "La page %title a été ajoutée."
+
+#: microstrategy.admin.inc:201;202
+msgid "Changes have been saved for page %title."
+msgstr "Les modifications ont été enregistrées pour la page %title."
+
+#: microstrategy.admin.inc:220;426
+msgid "%title settings"
+msgstr "Paramètres de %title"
+
+#: microstrategy.admin.inc:234;456 microstrategy.pages.inc:41;89;627
+msgid "Submit"
+msgstr "Soumettre"
+
+#: microstrategy.admin.inc:276;277
+msgid "Page default settings have been saved."
+msgstr "Les paramètres par défaut de la page ont été enregistrés."
+
+#: microstrategy.admin.inc:281;505;282;506
+msgid "%title settings have been saved."
+msgstr "Les paramètres de %title ont été enregistrés."
+
+#: microstrategy.admin.inc:313
+msgid "Are you sure you want to delete the page %title?"
+msgstr "Êtes-vous sûr de vouloir supprimer la page %title ?"
+
+#: microstrategy.admin.inc:329;330
+msgid "Page %title has been deleted."
+msgstr "La page %title a été supprimée."
+
+#: microstrategy.admin.inc:349;372
+msgid "Basic"
+msgstr "De base"
+
+#: microstrategy.admin.inc:349;374
+msgid "Master"
+msgstr "Principal"
+
+#: microstrategy.admin.inc:353
+msgid "Add block"
+msgstr "Ajouter un bloc"
+
+#: microstrategy.admin.inc:367
+msgid "Type"
+msgstr "Type"
+
+#: microstrategy.admin.inc:376
+msgid "configure"
+msgstr "configurer"
+
+#: microstrategy.admin.inc:395
+msgid "You must specify a valid block name."
+msgstr "Vous devez spécifier un nom de bloc valide."
+
+#: microstrategy.admin.inc:409;410
+msgid "Block %title has been added."
+msgstr "Le bloc %title a été ajouté."
+
+#: microstrategy.admin.inc:496;497
+msgid "Basic block default settings have been saved."
+msgstr "Les paramètres par défaut du bloc de base ont été enregistrés."
+
+#: microstrategy.admin.inc:500;501
+msgid "Master block default settings have been saved."
+msgstr "Les paramètres par défaut du bloc principal ont été enregistrés."
+
+#: microstrategy.admin.inc:518
+msgid "Are you sure you want to delete the block %title?"
+msgstr "Êtes-vous sûr de vouloir supprimer bloc %title ?"
+
+#: microstrategy.admin.inc:534;535
+msgid "Block %title has been deleted."
+msgstr "Le bloc %title a été supprimé."
+
+#: microstrategy.admin.inc:542;608
+msgid "MicroStrategy Content URL"
+msgstr "URL du contenu MicroStrategy"
+
+#: microstrategy.admin.inc:547;613
+msgid "MicroStrategy Web Base URL"
+msgstr "URL de base MicroStrategy Web"
+
+#: microstrategy.admin.inc:554;620
+msgid "MicroStrategy Web Task URL"
+msgstr "URL de la tâche MicroStrategy Web"
+
+#: microstrategy.admin.inc:561;651
+msgid "MicroStrategy Report URL"
+msgstr "URL du rapport Microstrategy"
+
+#: microstrategy.admin.inc:567;633
+msgid "MicroStrategy Folder URL"
+msgstr "URL du dossier MicroStrategy"
+
+#: microstrategy.admin.inc:573;639
+msgid "MicroStrategy History List URL"
+msgstr "URL de l'historique MicroStrategy"
+
+#: microstrategy.admin.inc:579;645
+msgid "MicroStrategy Search Page URL"
+msgstr "URL de la page de recherche MicroStrategy"
+
+#: microstrategy.admin.inc:585
+msgid "MicroStrategy Project Page URL"
+msgstr "URL de la page de projet MicroStrategy"
+
+#: microstrategy.admin.inc:591
+msgid "MicroStrategy HTML Document URL"
+msgstr "URL du document HTML MicroStrategy"
+
+#: microstrategy.admin.inc:597;657
+msgid "MicroStrategy Document URL"
+msgstr "URL de document MicroStrategy"
+
+#: microstrategy.admin.inc:627
+msgid "MicroStrategy Prompt URL"
+msgstr "URL de l'invite MicroStrategy"
+
+#: microstrategy.admin.inc:668
+msgid "MicroStrategy Server"
+msgstr "Serveur MicroStrategy"
+
+#: microstrategy.admin.inc:673
+msgid "MicroStrategy Intelligence Server"
+msgstr "MicroStrategy Intelligence Server"
+
+#: microstrategy.admin.inc:680
+msgid "MicroStrategy Intelligence Server Port"
+msgstr "Port MicroStrategy Intelligence Server"
+
+#: microstrategy.admin.inc:687
+msgid "MicroStrategy Single Sign-on Namespace"
+msgstr "Espace de noms d'ouverture de session unique MicroStrategy"
+
+#: microstrategy.admin.inc:690 microstrategy.pages.inc:116
+msgid "All MicroStrategy pages and blocks with the same Single Sign-on Namespace share the same MicroStrategy Credentials for this user."
+msgstr "Toutes les pages et tous les blocs MicroStrategy avec le même espace de noms d'ouverture de session unique partagent les informations d'authentification MicroStrategy pour cet utilisateur."
+
+#: microstrategy.admin.inc:694
+msgid "MicroStrategy Authentication Mode"
+msgstr "Mode d'authentification MicroStrategy"
+
+#: microstrategy.admin.inc:697
+msgid "Standard"
+msgstr "Standard"
+
+#: microstrategy.admin.inc:698
+msgid "NT"
+msgstr "NT"
+
+#: microstrategy.admin.inc:699
+msgid "Guest"
+msgstr "Invité"
+
+#: microstrategy.admin.inc:700
+msgid "LDAP"
+msgstr "LDAP"
+
+#: microstrategy.admin.inc:701
+msgid "Database"
+msgstr "Base de données"
+
+#: microstrategy.admin.inc:702
+msgid "Trusted"
+msgstr "Approuvé"
+
+#: microstrategy.admin.inc:703
+msgid "Integrated"
+msgstr "Intégré"
+
+#: microstrategy.admin.inc:708
+msgid "Let User Select Locales for MicroStrategy Web"
+msgstr "Permet à l'utilisateur de sélectionner les langues pour MicroStrategy Web"
+
+#: microstrategy.admin.inc:713
+msgid "MicroStrategy Project Name"
+msgstr "Nom de projet MicroStrategy"
+
+#: microstrategy.admin.inc:720
+msgid "Regular Working Set Size"
+msgstr "Taille d'ensemble actif standard"
+
+#: microstrategy.admin.inc:726
+msgid "Cancel pending requests upon logout"
+msgstr "Annuler les requêtes en cours à la déconnexion"
+
+#: microstrategy.admin.inc:731
+msgid "Remove jobs in History List upon logout"
+msgstr "Supprimer les tâches de l'historique à la déconnexion"
+
+#: microstrategy.admin.inc:733 microstrategy.pages.inc:569
+msgid "No"
+msgstr "Non"
+
+#: microstrategy.admin.inc:733 microstrategy.pages.inc:569
+msgid "Yes"
+msgstr "Oui"
+
+#: microstrategy.admin.inc:733
+msgid "ReadOnly"
+msgstr "Lecture seule"
+
+#: microstrategy.admin.inc:742
+msgid "Plug-ins"
+msgstr "Plug-ins"
+
+#: microstrategy.admin.inc:748
+msgid "Credential Mapper File Name"
+msgstr "Nom du fichier du mappeur d'informations d'authentification"
+
+#: microstrategy.admin.inc:754
+msgid "Credential Mapper Function Name"
+msgstr "Nom de la fonction du mappeur d'informations d'authentification"
+
+#: microstrategy.admin.inc:760
+msgid "URL Parameter Mapper File Name"
+msgstr "Nom du fichier du mappeur de paramètre d'URL"
+
+#: microstrategy.admin.inc:766
+msgid "URL Parameter Mapper Function Name"
+msgstr "Nom de fonction du mappeur de paramètre d'URL"
+
+#: microstrategy.admin.inc:776 microstrategy.pages.inc:584
+msgid "User Parameters"
+msgstr "Paramètres d'utilisateur"
+
+#: microstrategy.admin.inc:782
+msgid "Shared User Parameter"
+msgstr "Paramètre d'utilisateur partagé"
+
+#: microstrategy.admin.inc:785
+msgid "Format of \"name1:value1;name2:value2;\""
+msgstr "Format de \"name1:value1;name2:value2;\""
+
+#: microstrategy.admin.inc:789
+msgid "Personal User Parameter Template"
+msgstr "Modèle de paramètre d'utilisateur personnel"
+
+#: microstrategy.admin.inc:792
+msgid "Format of \"name1:display name1:default value;name2: display name2:default value2;\""
+msgstr "Format de \"name1:display name1:default value;name2: display name2:default value2;\""
+
+#: microstrategy.admin.inc:801;814
+msgid "Default Preferences"
+msgstr "Préférences par défaut"
+
+#: microstrategy.admin.inc:915
+msgid "Path must be lowercase alphanumeric, underscores, dashes, or forward-slashes only."
+msgstr "Le chemin d'accès doit être composé uniquement de caractères alphanumériques, de traits de soulignement, de tirets ou de barres obliques."
+
+#: microstrategy.admin.inc:922
+msgid "Path cannot begin or end with a slash."
+msgstr "Le chemin d'accès ne peut pas commencer ou se terminer par une barre oblique."
+
+#: microstrategy.admin.inc:934
+msgid "The chosen path is already in use."
+msgstr "Le chemin d'accès choisi est déjà utilisé."
+
+#: microstrategy.admin.inc:188;202;277;282;330;410;497;501;506;535 microstrategy.pages.inc:620;632 includes/microstrategy.session.inc:110;120;127;264;274;282
+msgid "microstrategy"
+msgstr "microstrategy"
+
+#: microstrategy.pages.inc:13;51
+msgid "%title preferences"
+msgstr "Préférences de %title"
+
+#: microstrategy.pages.inc:95;635
+msgid "Cancel"
+msgstr "Annuler"
+
+#: microstrategy.pages.inc:114
+msgid "Enter credential information to connect to MicroStrategy:"
+msgstr "Veuillez saisir les informations d'authentification nécessaires à la connexion à MicroStrategy :"
+
+#: microstrategy.pages.inc:124
+msgid "Logon"
+msgstr "Ouvrir une session"
+
+#: microstrategy.pages.inc:131
+msgid "Password"
+msgstr "Mot de passe"
+
+#: microstrategy.pages.inc:139
+msgid "Default"
+msgstr "Par défaut"
+
+#: microstrategy.pages.inc:140
+msgid "German"
+msgstr "Allemand"
+
+#: microstrategy.pages.inc:141
+msgid "Spanish"
+msgstr "Espagnol"
+
+#: microstrategy.pages.inc:142
+msgid "English"
+msgstr "Anglais"
+
+#: microstrategy.pages.inc:143
+msgid "English (UK)"
+msgstr "Anglais (R-U)"
+
+#: microstrategy.pages.inc:144
+msgid "French"
+msgstr "Français"
+
+#: microstrategy.pages.inc:145
+msgid "Italian"
+msgstr "Italien"
+
+#: microstrategy.pages.inc:146
+msgid "Japanese"
+msgstr "Japonais"
+
+#: microstrategy.pages.inc:147
+msgid "Korean"
+msgstr "Coréen"
+
+#: microstrategy.pages.inc:148
+msgid "Portuguese (Brazil)"
+msgstr "Portugais (Brésil)"
+
+#: microstrategy.pages.inc:149
+msgid "Swedish"
+msgstr "Suédois"
+
+#: microstrategy.pages.inc:150
+msgid "Chinese (Simplified)"
+msgstr "Chinois (Simplifié)"
+
+#: microstrategy.pages.inc:151
+msgid "Chinese (Traditional)"
+msgstr "Chinois (Traditionnel)"
+
+#: microstrategy.pages.inc:155
+msgid "Language"
+msgstr "Langue"
+
+#: microstrategy.pages.inc:161
+msgid "Number and Date Format"
+msgstr "Format de nombre et de date"
+
+#: microstrategy.pages.inc:167
+msgid "Metadata"
+msgstr "Métadonnées"
+
+#: microstrategy.pages.inc:173
+msgid "Data"
+msgstr "Données"
+
+#: microstrategy.pages.inc:185;288
+msgid "Select MicroStrategy business intelligence content to display:"
+msgstr "Sélectionnez le contenu MicroStrategy Business Intelligence à afficher :"
+
+#: microstrategy.pages.inc:197;304
+msgid "Display MicroStrategy Report"
+msgstr "Afficher le rapport MicroStrategy "
+
+#: microstrategy.pages.inc:198;301
+msgid "Display MicroStrategy Folder"
+msgstr "Afficher le dossier MicroStrategy "
+
+#: microstrategy.pages.inc:199;302
+msgid "Display MicroStrategy History List"
+msgstr "Afficher l'historique MicroStrategy"
+
+#: microstrategy.pages.inc:200;303
+msgid "Display MicroStrategy Search Page"
+msgstr "Afficher la page Rechercher de MicroStrategy"
+
+#: microstrategy.pages.inc:201
+msgid "Display MicroStrategy Project Page"
+msgstr "Afficher la page Projet de MicroStrategy"
+
+#: microstrategy.pages.inc:202
+msgid "Display MicroStrategy HTML Document"
+msgstr "Afficher le document HTML MicroStrategy"
+
+#: microstrategy.pages.inc:203;305
+msgid "Display MicroStrategy Document"
+msgstr "Afficher le document MicroStrategy "
+
+#: microstrategy.pages.inc:210;239;252;265;313;326;339;368
+msgid "ID"
+msgstr "ID"
+
+#: microstrategy.pages.inc:222;351
+msgid "Grid"
+msgstr "Grille"
+
+#: microstrategy.pages.inc:223;352
+msgid "Graph"
+msgstr "Graphique"
+
+#: microstrategy.pages.inc:224;353
+msgid "Grid and Graph"
+msgstr "Grille et Graphique"
+
+#: microstrategy.pages.inc:230;277;359;380
+msgid "None"
+msgstr "Aucun"
+
+#: microstrategy.pages.inc:231;278;360;381
+msgid "Flash Visualization"
+msgstr "Visualisation Flash"
+
+#: microstrategy.pages.inc:232;279;361;382
+msgid "AJAX Visualization"
+msgstr "Visualisation AJAX"
+
+#: microstrategy.pages.inc:300
+msgid "Display MicroStrategy Prompts (using a prompted report)"
+msgstr "Afficher les invites MicroStrategy (à l'aide d'un rapport à invites)"
+
+#: microstrategy.pages.inc:438;498
+msgid "Load last session settings"
+msgstr "Charger les paramètres de la dernière session"
+
+#: microstrategy.pages.inc:513
+msgid "Set master block properties"
+msgstr "Définir les propriétés du bloc principal"
+
+#: microstrategy.pages.inc:518
+msgid "Display Send-to Menu"
+msgstr "Afficher le menu Envoyer à"
+
+#: microstrategy.pages.inc:528
+msgid "Default Target Block"
+msgstr "Bloc cible par défaut"
+
+#: microstrategy.pages.inc:540
+msgid "Enable All For Send as Filter"
+msgstr "Enable All For Send as Filter"
+
+#: microstrategy.pages.inc:550
+msgid "Choose display properties:"
+msgstr "Choisissez les propriétés d'affichage :"
+
+#: microstrategy.pages.inc:555
+msgid "Height"
+msgstr "Hauteur"
+
+#: microstrategy.pages.inc:561
+msgid "Width"
+msgstr "Largeur"
+
+#: microstrategy.pages.inc:567
+msgid "Scrolling"
+msgstr "Défilement"
+
+#: microstrategy.pages.inc:569
+msgid "Auto"
+msgstr "Auto"
+
+#: microstrategy.pages.inc:762;768
+msgid "Report Name or ID cannot be empty!"
+msgstr "Le nom ou l'ID du rapport ne peut pas être vide."
+
+#: microstrategy.pages.inc:774
+msgid "Folder Name or ID cannot be empty!"
+msgstr "Le nom ou l'ID du dossier ne peut pas être vide."
+
+#: microstrategy.pages.inc:780
+msgid "HTML Document Name or ID cannot be empty!"
+msgstr "Le nom ou l'ID du document HTML ne peut pas être vide."
+
+#: microstrategy.pages.inc:786
+msgid "Document Name or ID cannot be empty!"
+msgstr "Le nom ou l'ID du document ne peut pas être vide."
+
+#: microstrategy.pages.inc:620;632
+msgid "%title preferences have been saved."
+msgstr "Les préférences de %title ont été enregistrées."
+
+#: microstrategy.module:131 microstrategy.info:0
+msgid "Integrate MicroStrategy into Drupal"
+msgstr "Intégrer MicroStrategy dans Drupal"
+
+#: microstrategy.module:134;283
+msgid "List, edit, or add MicroStrategy pages and blocks."
+msgstr "Répertorier, modifier ou ajouter des pages et des blocs MicroStrategy."
+
+#: microstrategy.module:137
+msgid "Microstrategy pages are listed below. Each page is accessible from one URL on your site. You can create as many pages as you need and determine the content to display (such as reports, documents, folders, and so on)."
+msgstr "Les pages MicroStrategy sont répertoriées ci-après. Chaque page est accessible à partir d'une URL sur votre site. Vous pouvez créer autant de pages que nécessaire et déterminer le contenu à afficher (tel que les rapports, les documents, les dossiers, etc.)."
+
+#: microstrategy.module:140
+msgid "Microstrategy blocks are listed below. Each block is a Drupal block which displays some MicroStrategy content (for example, reports, documents, folders, and so on). You can create as many blocks as you need and determine what content to display. A good practice is to install the <a href='http://drupal.org/project/homebox'>HomeBox</a> module and then add blocks in a Homebox page, to display multiple MicroStrategy content in one page."
+msgstr "Les blocs MicroStrategy sont répertoriés ci-après. Chaque bloc MicroStrategy est un bloc Drupal qui affiche du contenu MicroStrategy (par exemple, des rapports, des documents, dossiers, etc.). Vous pouvez créer autant de blocs que nécessaire et déterminer le contenu à afficher. Une bonne pratique consiste à installer le module <a href='http://drupal.org/project/homebox'>HomeBox</a> puis d'ajouter des blocs dans une page Homebox, pour afficher du contenu MicroStrategy multiple dans une page."
+
+#: microstrategy.module:147
+msgid "Set the settings for the MicroStrategy page. The changes will overwrite default settings."
+msgstr "Définissez les paramètres pour la page MicroStrategy. Les modifications écraseront les paramètres par défaut."
+
+#: microstrategy.module:158
+msgid "Set the settings for the MicroStrategy block. The changes will overwrite default settings."
+msgstr "Définissez les paramètres pour le bloc MicroStrategy. Les modifications écraseront les paramètres par défaut."
+
+#: microstrategy.module:405
+msgid "Target Portlet {0} cannot be found!"
+msgstr "Le portlet cible {0} est introuvable."
+
+#: microstrategy.module:406
+msgid "Target Portlet {0}  points to different MicroStrategy Project"
+msgstr "Le portlet cible {0} pointe vers un projet MicroStrategy différent."
+
+#: microstrategy.module:407
+msgid "Cannot display content because Portlet {0} is in edit mode."
+msgstr "Impossible d'afficher le contenu car le portlet {0} est en mode d'édition."
+
+#: microstrategy.module:441
+msgid "New Window"
+msgstr "Nouvelle Fenêtre"
+
+#: microstrategy.module:463;267
+msgid "Preferences"
+msgstr "Préférences"
+
+#: microstrategy.module:171
+msgid "administer microstrategy"
+msgstr "Administrer MicroStrategy"
+
+#: microstrategy.module:171
+msgid "access preferences"
+msgstr "Préférences d'accès"
+
+#: microstrategy.module:262
+msgid "View"
+msgstr "Vue"
+
+#: microstrategy.module:282 microstrategy.info:0;0
+msgid "MicroStrategy"
+msgstr "MicroStrategy"
+
+#: microstrategy.module:296
+msgid "List"
+msgstr "Liste"
+
+#: microstrategy.module:327
+msgid "Edit page"
+msgstr "Modifier la page"
+
+#: microstrategy.module:336
+msgid "Page Settings"
+msgstr "Paramètres de la page"
+
+#: microstrategy.module:345
+msgid "Page"
+msgstr "Page"
+
+#: microstrategy.module:355
+msgid "Block Settings"
+msgstr "Paramètres du bloc"
+
+#: microstrategy.module:364
+msgid "Block"
+msgstr "Bloc"
+
+#: includes/microstrategy.session.inc:111;128;110;120;127;274
+msgid "Creating a session caused an error: %error"
+msgstr "La création d'une session a entraîné une erreur : %error"
+
+#: includes/microstrategy.session.inc:118;272
+msgid "The response from %task task caused the following error: %error on line %line."
+msgstr "La réponse de la tâche %task a provoqué l'erreur suivante : %error sur la ligne %line."
+
+#: includes/microstrategy.session.inc:264;282
+msgid "Closing a session for %title caused an error: %error"
+msgstr "La fermeture d'une session pour %title a entraîné une erreur : %error"
+

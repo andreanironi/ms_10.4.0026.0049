@@ -1,0 +1,703 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  microstrategy.admin.inc: n/a
+#  microstrategy.module: n/a
+#  microstrategy.pages.inc: n/a
+#  includes/microstrategy.session.inc: n/a
+#  microstrategy.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2011-08-22 06:54+0000\n"
+"PO-Revision-Date: 2011-08-22 06:54+0000\n"
+"Last-Translator: MicroStrategy Translation Team\n"
+"Language-Team: MicroStrategy Translation Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: microstrategy.admin.inc:14 microstrategy.module:289
+msgid "Pages"
+msgstr "页面"
+
+#: microstrategy.admin.inc:17
+msgid "List, edit, or add MicroStrategy pages. A MicroStrategy page is a Drupal page that displays MicroStrategy content (such as reports, documents, folders, and so on)."
+msgstr "列出, 编辑或添加 MicroStrategy 页面。MicroStrategy 页面是一种 Drupal 页面, 用于显示 MicroStrategy 内容(比如报表, 文档, 文件夹等)。"
+
+#: microstrategy.admin.inc:20 microstrategy.module:309
+msgid "Blocks"
+msgstr "区块"
+
+#: microstrategy.admin.inc:23
+msgid "List, edit, or add MicroStrategy blocks. A MicroStrategy block is a Drupal block that displays MicroStrategy content (such as reports, documents, folders, and so on)."
+msgstr "列出, 编辑或添加 MicroStrategy 区块。MicroStrategy 区块属于 Drupal 区块, 用于显示 MicroStrategy 内容(比如报表, 文档, 文件夹等)。"
+
+#: microstrategy.admin.inc:26 microstrategy.module:318
+msgid "Default Settings"
+msgstr "默认设置"
+
+#: microstrategy.admin.inc:29
+msgid "Set the default settings for MicroStrategy pages or blocks. The changes are applied to any newly added and non-customized existing pages or blocks."
+msgstr "设定 MicroStrategy 页面或区块的默认设置。所做的更改将应用到所有新添加的非自定义的现有页面或区块。"
+
+#: microstrategy.admin.inc:41;217
+msgid "Page Default Settings"
+msgstr "页面默认设置"
+
+#: microstrategy.admin.inc:44 microstrategy.module:144
+msgid "Set the default settings for MicroStrategy pages. The changes are applied to any newly added pages, as well as non-customized existing pages."
+msgstr "设定 MicroStrategy 页面的默认设置。所做的更改将应用到所有新添加的页面以及非自定义的现有页面。"
+
+#: microstrategy.admin.inc:47;420
+msgid "Basic block default settings"
+msgstr "基本区块默认设置"
+
+#: microstrategy.admin.inc:50 microstrategy.module:152
+msgid "Set the default settings for MicroStrategy basic blocks. The changes are applied to any newly added basic blocks, as well as non-customized existing basic blocks."
+msgstr "设定 MicroStrategy 基本区块的默认设置。所做的更改将应用到所有新添加的基本区块以及非自定义的现有基本区块。"
+
+#: microstrategy.admin.inc:53;423
+msgid "Master block default settings"
+msgstr "主区块默认设置"
+
+#: microstrategy.admin.inc:56 microstrategy.module:155
+msgid "Set the default settings for MicroStrategy master blocks. The changes are applied to any newly added master blocks, as well as non-customized existing master blocks."
+msgstr "设定 MicroStrategy 主区块的默认设置。所做的更改将应用到所有新添加的主区块以及非自定义的现有主区块。"
+
+#: microstrategy.admin.inc:76;367 microstrategy.pages.inc:211;240;253;266;314;327;340;369
+msgid "Name"
+msgstr "名称"
+
+#: microstrategy.admin.inc:76;367
+msgid "Operations"
+msgstr "操作"
+
+#: microstrategy.admin.inc:81
+msgid "edit"
+msgstr "编辑"
+
+#: microstrategy.admin.inc:82;377
+msgid "settings"
+msgstr "设置"
+
+#: microstrategy.admin.inc:83;378
+msgid "delete"
+msgstr "删除"
+
+#: microstrategy.admin.inc:102
+msgid "Page Title"
+msgstr "页面标题"
+
+#: microstrategy.admin.inc:107
+msgid "The title for this page."
+msgstr "此页面的标题。"
+
+#: microstrategy.admin.inc:112
+msgid "Path"
+msgstr "路径"
+
+#: microstrategy.admin.inc:117
+msgid "Specify a URL by which this page can be accessed. Use a relative path and do not use trailing slashes."
+msgstr "指定一个可以访问到此页面的 URL。使用相对路径但不要使用斜线。"
+
+#: microstrategy.admin.inc:121
+msgid "Create a menu entry"
+msgstr "创建菜单项"
+
+#: microstrategy.admin.inc:122
+msgid "If selected, a menu entry will be created for this page."
+msgstr "若选此项, 将为此页面创建一个菜单项。"
+
+#: microstrategy.admin.inc:139
+msgid "Show page for specific roles"
+msgstr "显示特定角色的页面"
+
+#: microstrategy.admin.inc:142
+msgid "Show this page only for the selected role(s)."
+msgstr "只为所选角色显示此页面"
+
+#: microstrategy.admin.inc:153;170;190
+msgid "Save page"
+msgstr "保存页面"
+
+#: microstrategy.admin.inc:161;170;176 microstrategy.module:301
+msgid "Add page"
+msgstr "添加页面"
+
+#: microstrategy.admin.inc:187;188
+msgid "Page %title has been added."
+msgstr "页面 %title 已添加。"
+
+#: microstrategy.admin.inc:201;202
+msgid "Changes have been saved for page %title."
+msgstr "已保存页面 %title 的更改。"
+
+#: microstrategy.admin.inc:220;426
+msgid "%title settings"
+msgstr "%title 设置"
+
+#: microstrategy.admin.inc:234;456 microstrategy.pages.inc:41;89;627
+msgid "Submit"
+msgstr "提交"
+
+#: microstrategy.admin.inc:276;277
+msgid "Page default settings have been saved."
+msgstr "页面默认设置已保存。"
+
+#: microstrategy.admin.inc:281;505;282;506
+msgid "%title settings have been saved."
+msgstr "%title 默认设置已保存。"
+
+#: microstrategy.admin.inc:313
+msgid "Are you sure you want to delete the page %title?"
+msgstr "确定要删除页面 %title 吗?"
+
+#: microstrategy.admin.inc:329;330
+msgid "Page %title has been deleted."
+msgstr "页面 %title 已删除。"
+
+#: microstrategy.admin.inc:349;372
+msgid "Basic"
+msgstr "基本"
+
+#: microstrategy.admin.inc:349;374
+msgid "Master"
+msgstr "母版"
+
+#: microstrategy.admin.inc:353
+msgid "Add block"
+msgstr "添加区块"
+
+#: microstrategy.admin.inc:367
+msgid "Type"
+msgstr "类型"
+
+#: microstrategy.admin.inc:376
+msgid "configure"
+msgstr "配置"
+
+#: microstrategy.admin.inc:395
+msgid "You must specify a valid block name."
+msgstr "必须指定一个有效的区块名称。"
+
+#: microstrategy.admin.inc:409;410
+msgid "Block %title has been added."
+msgstr "区块 %title 已添加。"
+
+#: microstrategy.admin.inc:496;497
+msgid "Basic block default settings have been saved."
+msgstr "基本区块默认设置已保存。"
+
+#: microstrategy.admin.inc:500;501
+msgid "Master block default settings have been saved."
+msgstr "主区块默认设置已保存。"
+
+#: microstrategy.admin.inc:518
+msgid "Are you sure you want to delete the block %title?"
+msgstr "确定要删除区块 %title 吗?"
+
+#: microstrategy.admin.inc:534;535
+msgid "Block %title has been deleted."
+msgstr "区块 %title 已删除。"
+
+#: microstrategy.admin.inc:542;608
+msgid "MicroStrategy Content URL"
+msgstr "MicroStrategy 内容 URL"
+
+#: microstrategy.admin.inc:547;613
+msgid "MicroStrategy Web Base URL"
+msgstr "MicroStrategy Web 库 URL"
+
+#: microstrategy.admin.inc:554;620
+msgid "MicroStrategy Web Task URL"
+msgstr "MicroStrategy Web 任务 URL"
+
+#: microstrategy.admin.inc:561;651
+msgid "MicroStrategy Report URL"
+msgstr "MicroStrategy 报表 URL"
+
+#: microstrategy.admin.inc:567;633
+msgid "MicroStrategy Folder URL"
+msgstr "MicroStrategy 文件夹 URL"
+
+#: microstrategy.admin.inc:573;639
+msgid "MicroStrategy History List URL"
+msgstr "MicroStrategy 历史列表 URL"
+
+#: microstrategy.admin.inc:579;645
+msgid "MicroStrategy Search Page URL"
+msgstr "MicroStrategy 搜索页 URL"
+
+#: microstrategy.admin.inc:585
+msgid "MicroStrategy Project Page URL"
+msgstr "MicroStrategy 项目页 URL"
+
+#: microstrategy.admin.inc:591
+msgid "MicroStrategy HTML Document URL"
+msgstr "MicroStrategy HTML 文档 URL"
+
+#: microstrategy.admin.inc:597;657
+msgid "MicroStrategy Document URL"
+msgstr "MicroStrategy 文档 URL"
+
+#: microstrategy.admin.inc:627
+msgid "MicroStrategy Prompt URL"
+msgstr "MicroStrategy 提示 URL"
+
+#: microstrategy.admin.inc:668
+msgid "MicroStrategy Server"
+msgstr "MicroStrategy 服务器"
+
+#: microstrategy.admin.inc:673
+msgid "MicroStrategy Intelligence Server"
+msgstr "MicroStrategy Intelligence Server"
+
+#: microstrategy.admin.inc:680
+msgid "MicroStrategy Intelligence Server Port"
+msgstr "MicroStrategy Intelligence Server 端口"
+
+#: microstrategy.admin.inc:687
+msgid "MicroStrategy Single Sign-on Namespace"
+msgstr "MicroStrategy 单一登录命名空间"
+
+#: microstrategy.admin.inc:690 microstrategy.pages.inc:116
+msgid "All MicroStrategy pages and blocks with the same Single Sign-on Namespace share the same MicroStrategy Credentials for this user."
+msgstr "所有使用相同单一登录命名空间的 MicroStrategy 页面和区块共享此用户的相同 MicroStrategy 凭据。"
+
+#: microstrategy.admin.inc:694
+msgid "MicroStrategy Authentication Mode"
+msgstr "MicroStrategy 验证模式"
+
+#: microstrategy.admin.inc:697
+msgid "Standard"
+msgstr "标准"
+
+#: microstrategy.admin.inc:698
+msgid "NT"
+msgstr "NT"
+
+#: microstrategy.admin.inc:699
+msgid "Guest"
+msgstr "访客"
+
+#: microstrategy.admin.inc:700
+msgid "LDAP"
+msgstr "LDAP"
+
+#: microstrategy.admin.inc:701
+msgid "Database"
+msgstr "数据库"
+
+#: microstrategy.admin.inc:702
+msgid "Trusted"
+msgstr "可信任"
+
+#: microstrategy.admin.inc:703
+msgid "Integrated"
+msgstr "集成的"
+
+#: microstrategy.admin.inc:708
+msgid "Let User Select Locales for MicroStrategy Web"
+msgstr "让用户选择 MicroStrategy Web 的区域设置"
+
+#: microstrategy.admin.inc:713
+msgid "MicroStrategy Project Name"
+msgstr "MicroStrategy 项目名称"
+
+#: microstrategy.admin.inc:720
+msgid "Regular Working Set Size"
+msgstr "常规工作设置大小"
+
+#: microstrategy.admin.inc:726
+msgid "Cancel pending requests upon logout"
+msgstr "注销时取消待定的请求"
+
+#: microstrategy.admin.inc:731
+msgid "Remove jobs in History List upon logout"
+msgstr "注销时从历史列表移除作业"
+
+#: microstrategy.admin.inc:733 microstrategy.pages.inc:569
+msgid "No"
+msgstr "否"
+
+#: microstrategy.admin.inc:733 microstrategy.pages.inc:569
+msgid "Yes"
+msgstr "是"
+
+#: microstrategy.admin.inc:733
+msgid "ReadOnly"
+msgstr "只读"
+
+#: microstrategy.admin.inc:742
+msgid "Plug-ins"
+msgstr "插件"
+
+#: microstrategy.admin.inc:748
+msgid "Credential Mapper File Name"
+msgstr "凭据映射程序文件名称"
+
+#: microstrategy.admin.inc:754
+msgid "Credential Mapper Function Name"
+msgstr "凭据映射程序函数名称"
+
+#: microstrategy.admin.inc:760
+msgid "URL Parameter Mapper File Name"
+msgstr "URL 参数映射程序文件名称"
+
+#: microstrategy.admin.inc:766
+msgid "URL Parameter Mapper Function Name"
+msgstr "URL 参数映射程序函数名称"
+
+#: microstrategy.admin.inc:776 microstrategy.pages.inc:584
+msgid "User Parameters"
+msgstr "用户参数"
+
+#: microstrategy.admin.inc:782
+msgid "Shared User Parameter"
+msgstr "共享用户参数"
+
+#: microstrategy.admin.inc:785
+msgid "Format of \"name1:value1;name2:value2;\""
+msgstr "\"name1:value1;name2:value2;\" 格式"
+
+#: microstrategy.admin.inc:789
+msgid "Personal User Parameter Template"
+msgstr "个人用户参数模板"
+
+#: microstrategy.admin.inc:792
+msgid "Format of \"name1:display name1:default value;name2: display name2:default value2;\""
+msgstr "\"name1:display name1:default value;name2: display name2:default value2;\" 格式"
+
+#: microstrategy.admin.inc:801;814
+msgid "Default Preferences"
+msgstr "默认首选项"
+
+#: microstrategy.admin.inc:915
+msgid "Path must be lowercase alphanumeric, underscores, dashes, or forward-slashes only."
+msgstr "路径中只能包含小写字母数字, 斜杠或正斜杠。"
+
+#: microstrategy.admin.inc:922
+msgid "Path cannot begin or end with a slash."
+msgstr "路径不能以斜线开头或结束。"
+
+#: microstrategy.admin.inc:934
+msgid "The chosen path is already in use."
+msgstr "所选路径已在使用中。"
+
+#: microstrategy.admin.inc:188;202;277;282;330;410;497;501;506;535 microstrategy.pages.inc:620;632 includes/microstrategy.session.inc:110;120;127;264;274;282
+msgid "microstrategy"
+msgstr "microstrategy"
+
+#: microstrategy.pages.inc:13;51
+msgid "%title preferences"
+msgstr "%title 首选项"
+
+#: microstrategy.pages.inc:95;635
+msgid "Cancel"
+msgstr "取消"
+
+#: microstrategy.pages.inc:114
+msgid "Enter credential information to connect to MicroStrategy:"
+msgstr "键入连接到MicroStrategy的认证信息："
+
+#: microstrategy.pages.inc:124
+msgid "Logon"
+msgstr "登陆"
+
+#: microstrategy.pages.inc:131
+msgid "Password"
+msgstr "密码"
+
+#: microstrategy.pages.inc:139
+msgid "Default"
+msgstr "缺省"
+
+#: microstrategy.pages.inc:140
+msgid "German"
+msgstr "德语"
+
+#: microstrategy.pages.inc:141
+msgid "Spanish"
+msgstr "西班牙语"
+
+#: microstrategy.pages.inc:142
+msgid "English"
+msgstr "英语"
+
+#: microstrategy.pages.inc:143
+msgid "English (UK)"
+msgstr "英语（UK）"
+
+#: microstrategy.pages.inc:144
+msgid "French"
+msgstr "法语"
+
+#: microstrategy.pages.inc:145
+msgid "Italian"
+msgstr "意大利语"
+
+#: microstrategy.pages.inc:146
+msgid "Japanese"
+msgstr "日语"
+
+#: microstrategy.pages.inc:147
+msgid "Korean"
+msgstr "朝鲜语"
+
+#: microstrategy.pages.inc:148
+msgid "Portuguese (Brazil)"
+msgstr "葡萄牙语(Brazil)"
+
+#: microstrategy.pages.inc:149
+msgid "Swedish"
+msgstr "瑞典语"
+
+#: microstrategy.pages.inc:150
+msgid "Chinese (Simplified)"
+msgstr "中文（简体）"
+
+#: microstrategy.pages.inc:151
+msgid "Chinese (Traditional)"
+msgstr "中文（繁体）"
+
+#: microstrategy.pages.inc:155
+msgid "Language"
+msgstr "语言"
+
+#: microstrategy.pages.inc:161
+msgid "Number and Date Format"
+msgstr "数字和日期格式"
+
+#: microstrategy.pages.inc:167
+msgid "Metadata"
+msgstr "元数据"
+
+#: microstrategy.pages.inc:173
+msgid "Data"
+msgstr "数据"
+
+#: microstrategy.pages.inc:185;288
+msgid "Select MicroStrategy business intelligence content to display:"
+msgstr "选择MicroStrategy商业智能显示内容："
+
+#: microstrategy.pages.inc:197;304
+msgid "Display MicroStrategy Report"
+msgstr "显示MicroStrategy报表"
+
+#: microstrategy.pages.inc:198;301
+msgid "Display MicroStrategy Folder"
+msgstr "显示MicroStrategy文件夹"
+
+#: microstrategy.pages.inc:199;302
+msgid "Display MicroStrategy History List"
+msgstr "显示MicroStrategy历史列表"
+
+#: microstrategy.pages.inc:200;303
+msgid "Display MicroStrategy Search Page"
+msgstr "显示MicroStrategy搜索页"
+
+#: microstrategy.pages.inc:201
+msgid "Display MicroStrategy Project Page"
+msgstr "显示MicroStrategy项目页"
+
+#: microstrategy.pages.inc:202
+msgid "Display MicroStrategy HTML Document"
+msgstr "显示MicroStrategyHTML文档"
+
+#: microstrategy.pages.inc:203;305
+msgid "Display MicroStrategy Document"
+msgstr "显示MicroStrategy文档"
+
+#: microstrategy.pages.inc:210;239;252;265;313;326;339;368
+msgid "ID"
+msgstr "ID"
+
+#: microstrategy.pages.inc:222;351
+msgid "Grid"
+msgstr "表格"
+
+#: microstrategy.pages.inc:223;352
+msgid "Graph"
+msgstr "图表"
+
+#: microstrategy.pages.inc:224;353
+msgid "Grid and Graph"
+msgstr "表格和图表"
+
+#: microstrategy.pages.inc:230;277;359;380
+msgid "None"
+msgstr "无"
+
+#: microstrategy.pages.inc:231;278;360;381
+msgid "Flash Visualization"
+msgstr "Flash可视化"
+
+#: microstrategy.pages.inc:232;279;361;382
+msgid "AJAX Visualization"
+msgstr "AJAX可视化"
+
+#: microstrategy.pages.inc:300
+msgid "Display MicroStrategy Prompts (using a prompted report)"
+msgstr "显示MicroStrategy提示(使用一个提示型报表)"
+
+#: microstrategy.pages.inc:438;498
+msgid "Load last session settings"
+msgstr "加载最后一次会话设置"
+
+#: microstrategy.pages.inc:513
+msgid "Set master block properties"
+msgstr "设置主区块属性"
+
+#: microstrategy.pages.inc:518
+msgid "Display Send-to Menu"
+msgstr "显示发送至菜单"
+
+#: microstrategy.pages.inc:528
+msgid "Default Target Block"
+msgstr "默认目标区块"
+
+#: microstrategy.pages.inc:540
+msgid "Enable All For Send as Filter"
+msgstr "Enable All For Send as Filter"
+
+#: microstrategy.pages.inc:550
+msgid "Choose display properties:"
+msgstr "选择显示属性："
+
+#: microstrategy.pages.inc:555
+msgid "Height"
+msgstr "高度"
+
+#: microstrategy.pages.inc:561
+msgid "Width"
+msgstr "宽度"
+
+#: microstrategy.pages.inc:567
+msgid "Scrolling"
+msgstr "滚动"
+
+#: microstrategy.pages.inc:569
+msgid "Auto"
+msgstr "自动"
+
+#: microstrategy.pages.inc:762;768
+msgid "Report Name or ID cannot be empty!"
+msgstr "报表名或ID不能为空！"
+
+#: microstrategy.pages.inc:774
+msgid "Folder Name or ID cannot be empty!"
+msgstr "目录名或ID不能为空！"
+
+#: microstrategy.pages.inc:780
+msgid "HTML Document Name or ID cannot be empty!"
+msgstr "HTML文挡名或ID不能为空！"
+
+#: microstrategy.pages.inc:786
+msgid "Document Name or ID cannot be empty!"
+msgstr "文档名或ID不能为空！"
+
+#: microstrategy.pages.inc:620;632
+msgid "%title preferences have been saved."
+msgstr "%title 首选项已保存。"
+
+#: microstrategy.module:131 microstrategy.info:0
+msgid "Integrate MicroStrategy into Drupal"
+msgstr "在 Drupal 中集成 MicroStrategy"
+
+#: microstrategy.module:134;283
+msgid "List, edit, or add MicroStrategy pages and blocks."
+msgstr "列出, 编辑或添加 MicroStrategy 页面和区块"
+
+#: microstrategy.module:137
+msgid "Microstrategy pages are listed below. Each page is accessible from one URL on your site. You can create as many pages as you need and determine the content to display (such as reports, documents, folders, and so on)."
+msgstr "MicroStrategy 页面如下所示。每个页面可通过您站点上的 URL 进行访问。您可以按需要创建页面并决定要显示的内容(比如报表, 文档, 文件夹等)。"
+
+#: microstrategy.module:140
+msgid "Microstrategy blocks are listed below. Each block is a Drupal block which displays some MicroStrategy content (for example, reports, documents, folders, and so on). You can create as many blocks as you need and determine what content to display. A good practice is to install the <a href='http://drupal.org/project/homebox'>HomeBox</a> module and then add blocks in a Homebox page, to display multiple MicroStrategy content in one page."
+msgstr "MicroStrategy 区块如下所示。各个区块均属于 Drupal 区块, 用于显示部分 MicroStrategy 内容(比如报表, 文档, 文件夹等)。您可以按需要创建区块并决定要显示的内容。一个较好的实践操作可以是安装 <a href='http://drupal.org/project/homebox'>HomeBox</a> 模块并添加区块到 Homebox 页面, 以便在一个页面内显示多项 MicroStrategy 内容。"
+
+#: microstrategy.module:147
+msgid "Set the settings for the MicroStrategy page. The changes will overwrite default settings."
+msgstr "设定 MicroStrategy 页面设置。所做的更改将覆盖默认设置。"
+
+#: microstrategy.module:158
+msgid "Set the settings for the MicroStrategy block. The changes will overwrite default settings."
+msgstr "设定 MicroStrategy 区块设置。所做的更改将覆盖默认设置。"
+
+#: microstrategy.module:405
+msgid "Target Portlet {0} cannot be found!"
+msgstr "无法找到目标 Portlet  {0}!"
+
+#: microstrategy.module:406
+msgid "Target Portlet {0}  points to different MicroStrategy Project"
+msgstr "目标 Portlet  {0}指向不同 MicroStrategy 项目"
+
+#: microstrategy.module:407
+msgid "Cannot display content because Portlet {0} is in edit mode."
+msgstr "Portlet {0} 在编辑模式下无法显示内容。"
+
+#: microstrategy.module:441
+msgid "New Window"
+msgstr "新窗口"
+
+#: microstrategy.module:463;267
+msgid "Preferences"
+msgstr "首选项 "
+
+#: microstrategy.module:171
+msgid "administer microstrategy"
+msgstr "管理 MicroStrategy"
+
+#: microstrategy.module:171
+msgid "access preferences"
+msgstr "访问首选项"
+
+#: microstrategy.module:262
+msgid "View"
+msgstr "查看"
+
+#: microstrategy.module:282 microstrategy.info:0;0
+msgid "MicroStrategy"
+msgstr "MicroStrategy"
+
+#: microstrategy.module:296
+msgid "List"
+msgstr "列表"
+
+#: microstrategy.module:327
+msgid "Edit page"
+msgstr "编辑页面"
+
+#: microstrategy.module:336
+msgid "Page Settings"
+msgstr "页面设置"
+
+#: microstrategy.module:345
+msgid "Page"
+msgstr "页面"
+
+#: microstrategy.module:355
+msgid "Block Settings"
+msgstr "区块设置"
+
+#: microstrategy.module:364
+msgid "Block"
+msgstr "区块"
+
+#: includes/microstrategy.session.inc:111;128;110;120;127;274
+msgid "Creating a session caused an error: %error"
+msgstr "创建会话时发生一个错误:%error"
+
+#: includes/microstrategy.session.inc:118;272
+msgid "The response from %task task caused the following error: %error on line %line."
+msgstr "%task 任务的响应发生下列错误: %error 发生于第 %line 行。"
+
+#: includes/microstrategy.session.inc:264;282
+msgid "Closing a session for %title caused an error: %error"
+msgstr "关闭 %title 会话时发生一个错误:%error"
+

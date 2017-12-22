@@ -1,0 +1,5 @@
+name = MicroStrategy
+description = Integrate MicroStrategy into Drupal
+package = "MicroStrategy"
+core = 7.x
+version = "10.4.0026.0049"
